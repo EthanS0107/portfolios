@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "title": "Site de gestion de tâches",
+    "description": "Application web full-stack pour créer et organiser des tâches.",
+    "repo": "",
+    "demo": ""
+  },
+  {
+    "id": "2",
+    "title": "Analyse de données - Projet universitaire",
+    "description": "Pipeline d'analyse et visualisation de données avec Python.",
+    "repo": "",
+    "demo": ""
+  }
+]
