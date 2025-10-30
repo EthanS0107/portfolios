@@ -5,7 +5,7 @@ import { Send } from "lucide-react";
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(""); // Added dark classes for inputs
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -30,7 +30,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Success Message */}
       {submitted && (
-        <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
+        <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm dark:bg-green-900/30 dark:border-green-700 dark:text-green-300">
           ✓ Message envoyé avec succès ! Je vous répondrai bientôt.
         </div>
       )}
@@ -49,7 +49,7 @@ export default function ContactForm() {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all"
+          className="w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
           placeholder="Jean Martin"
         />
       </div>
@@ -68,7 +68,7 @@ export default function ContactForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all"
+          className="w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
           placeholder="jean.martin@example.com"
         />
       </div>
@@ -86,7 +86,7 @@ export default function ContactForm() {
           required
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all resize-none"
+          className="w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all resize-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
           rows={6}
           placeholder="Bonjour, ..."
         />
@@ -96,7 +96,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-brand-primary px-6 py-3 text-white font-medium hover:bg-brand-primary/90 focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed group"
+        className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-brand-primary px-6 py-3 text-white font-medium hover:bg-brand-primary/90 focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed group dark:bg-teal-600"
       >
         {isSubmitting ? (
           <>

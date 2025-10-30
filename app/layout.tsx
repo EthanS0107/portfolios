@@ -2,6 +2,7 @@ import "./globals.css";
 import { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata = {
   title: "Portfolio - Étudiant en informatique",
@@ -11,14 +12,16 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body>
-        <Header />
-        <main className="container py-8">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          <main className="container py-8">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

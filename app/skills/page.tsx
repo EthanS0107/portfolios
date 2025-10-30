@@ -53,16 +53,16 @@ export default function SkillsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-brand-muted/20">
+    <div className="min-h-screen bg-gradient-to-b from-white to-brand-muted/20 dark:from-gray-900 dark:to-gray-800">
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-6xl font-light tracking-tight text-brand-text">
+            <h1 className="text-5xl md:text-6xl font-light tracking-tight text-brand-text dark:text-gray-100">
               Compétences
             </h1>
             <div className="w-20 h-1 bg-brand-primary rounded-full" />
-            <p className="text-xl text-brand-text/70 max-w-2xl font-light">
+            <p className="text-xl text-brand-text/70 max-w-2xl font-light dark:text-gray-300">
               Un aperçu de mes compétences techniques et soft skills développées
               au fil de mes projets et formations.
             </p>

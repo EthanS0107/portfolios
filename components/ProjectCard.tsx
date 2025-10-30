@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="group relative bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-muted/30"
+      className="group relative bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-muted/30 dark:bg-gray-800 dark:border-gray-700"
     >
       {/* Image placeholder ou gradient */}
       <div className="relative h-48 bg-gradient-to-br from-brand-primary/20 via-brand-muted/30 to-brand-primary/10 overflow-hidden">
@@ -43,10 +43,10 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* Content */}
       <div className="p-6 space-y-4">
         <div>
-          <h3 className="text-xl font-semibold text-brand-text group-hover:text-brand-primary transition-colors duration-300">
+          <h3 className="text-xl font-semibold text-brand-text group-hover:text-brand-primary transition-colors duration-300 dark:text-gray-100 dark:group-hover:text-teal-400">
             {project.title}
           </h3>
-          <p className="mt-2 text-brand-text/70 leading-relaxed font-light">
+          <p className="mt-2 text-brand-text/70 leading-relaxed font-light dark:text-gray-300">
             {project.description}
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             {project.tags.map((tag, i) => (
               <span
                 key={i}
-                className="px-3 py-1 text-xs font-medium text-brand-primary bg-brand-primary/10 rounded-full"
+                className="px-3 py-1 text-xs font-medium text-brand-primary bg-brand-primary/10 rounded-full dark:text-teal-400 dark:bg-teal-900/30"
               >
                 {tag}
               </span>
@@ -72,7 +72,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               href={project.repo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-brand-text/70 hover:text-brand-primary transition-colors group/link"
+              className="inline-flex items-center gap-2 text-sm font-medium text-brand-text/70 hover:text-brand-primary transition-colors group/link dark:text-gray-400 dark:hover:text-teal-400"
             >
               <Github size={16} />
               <span>Code</span>
@@ -87,7 +87,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-brand-text/70 hover:text-brand-primary transition-colors group/link"
+              className="inline-flex items-center gap-2 text-sm font-medium text-brand-text/70 hover:text-brand-primary transition-colors group/link dark:text-gray-400 dark:hover:text-teal-400"
             >
               <ExternalLink size={16} />
               <span>Démo</span>
