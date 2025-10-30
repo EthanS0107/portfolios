@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Thème global basé sur la palette fournie */
 @layer base {
@@ -18,12 +18,20 @@
   }
 
   body {
-    @apply bg-brand-surface text-brand-text antialiased;
+    background-color: rgb(var(--color-brand-surface));
+    color: rgb(var(--color-brand-text));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
   }
 
   a {
-    @apply text-brand-primary hover:opacity-90 transition-opacity;
+    color: rgb(var(--color-brand-primary));
+    transition: opacity 150ms ease-in-out;
+  }
+
+  a:hover {
+    opacity: 0.9;
   }
 }
 
