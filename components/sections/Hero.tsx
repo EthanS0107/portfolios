@@ -17,8 +17,7 @@ export default function Hero() {
           Développeur Full Stack
         </h2>
         <p className="text-xl text-brand-text/80 max-w-2xl mx-auto">
-          Étudiant passionné en informatique, spécialisé dans le développement
-          web et les technologies modernes.
+          Étudiant passionné en informatique, spécialisé dans le développement.
         </p>
       </motion.div>
     </section>
