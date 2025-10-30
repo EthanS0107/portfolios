@@ -1,0 +1,21 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Style minimaliste Marine Léger -->
+  <rect width="32" height="32" rx="4" fill="#ffffff"/>
+  
+  <!-- Monogramme ES épuré -->
+  <text x="16" y="22" 
+        font-family="'Inter', system-ui, -apple-system, sans-serif" 
+        font-size="16" 
+        font-weight="300" 
+        text-anchor="middle"
+        letter-spacing="0.5"
+        fill="#545454">
+    ES
+  </text>
+  
+  <!-- Ligne accent -->
+  <line x1="10" y1="24" x2="22" y2="24" 
+        stroke="#5e787d" 
+        stroke-width="1" 
+        stroke-linecap="round"/>
+</svg>
