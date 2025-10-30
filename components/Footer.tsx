@@ -1,7 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="border-t mt-12">
-      <div className="container py-6 text-center text-sm text-gray-600">© {new Date().getFullYear()} — Portfolio étudiant</div>
+    <footer className="border-t border-brand-muted mt-12 bg-brand-surface">
+      <div className="container py-6 text-center text-sm text-brand-text/70">
+        © {new Date().getFullYear()} — Portfolio étudiant
+      </div>
     </footer>
-  )
+  );
 }
