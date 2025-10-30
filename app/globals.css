@@ -2,20 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 17, 24, 39;
-  --background-end-rgb: 31, 41, 55;
-}
+/* Thème global basé sur la palette fournie */
+@layer base {
+  :root {
+    /* Expose les couleurs en CSS vars si besoin "vanilla" */
+    --color-brand-primary: 94 120 125; /* #5e787d */
+    --color-brand-muted: 217 217 217; /* #d9d9d9 */
+    --color-brand-text: 84 84 84; /* #545454 */
+    --color-brand-surface: 255 255 255; /* #ffffff */
+  }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
-  );
-  min-height: 100vh;
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-brand-surface text-brand-text antialiased;
+    min-height: 100vh;
+  }
+
+  a {
+    @apply text-brand-primary hover:opacity-90 transition-opacity;
+  }
 }
 
 @layer utilities {
