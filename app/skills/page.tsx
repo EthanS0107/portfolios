@@ -1,4 +1,4 @@
-import SkillCategory from "@/components/SkillCategory";
+import SkillCategory from "../../components/SkillCategory";
 
 export const metadata = {
   title: "Compétences | Ethan Serville",

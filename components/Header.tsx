@@ -24,7 +24,7 @@ export default function Header() {
             href="/experience"
             className="text-brand-primary hover:opacity-90"
           >
-            Expérience
+            Parcours
           </Link>
           <Link href="/contact" className="text-brand-primary hover:opacity-90">
             Contact
