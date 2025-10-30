@@ -3,8 +3,7 @@ export default function About() {
     <section>
       <h2 className="text-2xl font-semibold">À propos de moi</h2>
       <p className="mt-4 text-gray-700">
-        Étudiant en informatique passionné par le développement web, l&apos;IA
-        et les bonnes pratiques du génie logiciel.
+        Étudiant en BUT informatique | Passionné par le développement web
       </p>
     </section>
   );
