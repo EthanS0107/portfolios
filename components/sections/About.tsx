@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20 bg-brand-surface">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -11,8 +11,8 @@ export default function About() {
           transition={{ duration: 1 }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl font-bold text-white mb-8">À propos</h2>
-          <div className="text-gray-300 space-y-4">
+          <h2 className="text-4xl font-bold text-brand-text mb-8">À propos</h2>
+          <div className="text-brand-text/80 space-y-4">
             <p>
               Je suis un étudiant en informatique passionné par la création
               d&apos;applications web modernes et performantes. Mon parcours

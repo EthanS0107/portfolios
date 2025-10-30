@@ -21,14 +21,14 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20 bg-brand-surface">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">
+          <h2 className="text-4xl font-bold text-brand-text mb-12 text-center">
             Projets
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -38,7 +38,7 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800 rounded-lg overflow-hidden"
+                className="rounded-lg overflow-hidden border border-brand-muted bg-brand-surface"
               >
                 <div className="relative aspect-video">
                   <img
@@ -48,15 +48,17 @@ export default function Projects() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="text-xl font-bold text-brand-text mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 mb-4">{project.description}</p>
+                  <p className="text-brand-text/80 mb-4">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm"
+                        className="px-3 py-1 bg-brand-muted/40 text-brand-text rounded-full text-sm"
                       >
                         {tech}
                       </span>
