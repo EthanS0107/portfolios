@@ -2,15 +2,25 @@
   {
     "id": "1",
     "title": "Site de gestion de tâches",
-    "description": "Application web full-stack pour créer et organiser des tâches.",
-    "repo": "",
-    "demo": ""
+    "description": "Application web full-stack pour créer et organiser des tâches avec authentification, gestion d'états et interface intuitive.",
+    "repo": "https://github.com",
+    "demo": "",
+    "tags": ["React", "Node.js", "MongoDB", "TypeScript"]
   },
   {
     "id": "2",
     "title": "Analyse de données - Projet universitaire",
-    "description": "Pipeline d'analyse et visualisation de données avec Python.",
-    "repo": "",
-    "demo": ""
+    "description": "Pipeline d'analyse et visualisation de données avec Python. Traitement de datasets complexes et création de dashboards interactifs.",
+    "repo": "https://github.com",
+    "demo": "",
+    "tags": ["Python", "Pandas", "Matplotlib", "Jupyter"]
+  },
+  {
+    "id": "3",
+    "title": "Portfolio Personnel",
+    "description": "Site portfolio moderne développé avec Next.js 14, featuring animations fluides et design responsive minimaliste.",
+    "repo": "https://github.com",
+    "demo": "",
+    "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
   }
 ]
