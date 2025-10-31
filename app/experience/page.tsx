@@ -82,7 +82,10 @@ export default function ExperiencePage() {
             </div>
           </div>
 
-          {/* Expérience professionnelle */}
+          {/* Expérience professionnelle (commentée pour exemple)
+              Décommente ce bloc quand tu voudras afficher tes expériences réelles.
+          */}
+          {/*
           {experience.length > 0 && (
             <div>
               <h2 className={styles.sectionTitle}>
@@ -95,6 +98,7 @@ export default function ExperiencePage() {
               </div>
             </div>
           )}
+          */}
         </div>
       </section>
     </div>
