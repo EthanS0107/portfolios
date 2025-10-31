@@ -11,7 +11,8 @@ import { useEffect, useState } from "react";
 const styles = {
   // Bouton du toggle
   button:
-    "p-2 rounded-lg border border-brand-muted/30 bg-brand-surface/50 hover:bg-brand-muted/20 transition-colors dark:border-gray-600 dark:hover:bg-gray-700/50",
+    "p-2 rounded-lg border border-brand-muted/30 bg-brand-surface/50 hover:bg-brand-muted/20 \
+    transition-colors dark:border-gray-600 dark:hover:bg-gray-700/50",
 
   // Placeholder pendant le chargement
   placeholder: "w-5 h-5",

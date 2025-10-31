@@ -13,9 +13,11 @@ const styles = {
   form: "space-y-6",
   label: "block text-brand-text mb-2",
   input:
-    "w-full px-4 py-2 bg-brand-surface text-brand-text rounded-lg border border-brand-muted focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary",
+    "w-full px-4 py-2 bg-brand-surface text-brand-text rounded-lg border border-brand-muted \
+    focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary",
   textarea:
-    "w-full px-4 py-2 bg-brand-surface text-brand-text rounded-lg border border-brand-muted focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary",
+    "w-full px-4 py-2 bg-brand-surface text-brand-text rounded-lg border border-brand-muted \
+    focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary",
   button:
     "w-full bg-brand-primary text-white py-3 px-6 rounded-lg hover:opacity-90 transition-opacity",
 };

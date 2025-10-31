@@ -19,7 +19,8 @@ type Project = {
 
 const styles = {
   // Carte principale du projet
-  card: "group relative bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-muted/30 dark:bg-gray-800 dark:border-gray-700",
+  card: "group relative bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all \
+  duration-300 border border-brand-muted/30 dark:bg-gray-800 dark:border-gray-700",
 
   // Zone d'image/gradient
   imageContainer:
@@ -43,7 +44,8 @@ const styles = {
 
   // Titre du projet
   title:
-    "text-xl font-semibold text-brand-text group-hover:text-brand-primary transition-colors duration-300 dark:text-gray-100 dark:group-hover:text-teal-400",
+    "text-xl font-semibold text-brand-text group-hover:text-brand-primary transition-colors duration-300 \
+    dark:text-gray-100 dark:group-hover:text-teal-400",
 
   // Description
   description:
@@ -53,13 +55,15 @@ const styles = {
   tagsContainer: "flex flex-wrap gap-2",
 
   // Tag individuel
-  tag: "px-3 py-1 text-xs font-medium text-brand-primary bg-brand-primary/10 rounded-full dark:text-teal-400 dark:bg-teal-900/30",
+  tag: "px-3 py-1 text-xs font-medium text-brand-primary bg-brand-primary/10 rounded-full \
+  dark:text-teal-400 dark:bg-teal-900/30",
 
   // Conteneur des liens
   linksContainer: "flex gap-4 pt-2",
 
   // Lien (Code/Démo)
-  link: "inline-flex items-center gap-2 text-sm font-medium text-brand-text/70 hover:text-brand-primary transition-colors group/link dark:text-gray-400 dark:hover:text-teal-400",
+  link: "inline-flex items-center gap-2 text-sm font-medium text-brand-text/70 hover:text-brand-primary \
+  transition-colors group/link dark:text-gray-400 dark:hover:text-teal-400",
 
   // Icône de flèche dans les liens
   arrow:
@@ -67,7 +71,8 @@ const styles = {
 
   // Accent décoratif dans le coin
   cornerAccent:
-    "absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-brand-primary/0 to-brand-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300",
+    "absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-brand-primary/0 to-brand-primary/5 opacity-0 \
+    group-hover:opacity-100 transition-opacity duration-300",
 };
 
 export default function ProjectCard({ project }: { project: Project }) {

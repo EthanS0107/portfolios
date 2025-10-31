@@ -27,13 +27,15 @@ const styles = {
   line: "absolute left-0 top-0 bottom-0 w-px bg-brand-muted dark:bg-gray-700",
 
   // Point/puce avec icône
-  dot: "absolute left-0 top-2 -translate-x-1/2 w-10 h-10 rounded-full bg-white border-2 border-brand-primary flex items-center justify-center dark:bg-gray-900/80 dark:border-teal-500",
+  dot: "absolute left-0 top-2 -translate-x-1/2 w-10 h-10 rounded-full bg-white border-2 border-brand-primary \
+  flex items-center justify-center dark:bg-gray-900/80 dark:border-teal-500",
 
   // Icône dans la puce
   icon: "text-brand-primary dark:text-teal-400",
 
   // Carte de contenu
-  card: "bg-white rounded-lg p-6 shadow-sm border border-brand-muted/30 hover:shadow-md transition-shadow dark:bg-gray-900/60 dark:border-gray-700 dark:shadow-none",
+  card: "bg-white rounded-lg p-6 shadow-sm border border-brand-muted/30 hover:shadow-md \
+  transition-shadow dark:bg-gray-900/60 dark:border-gray-700 dark:shadow-none",
 
   // En-tête de la carte
   header: "space-y-2 mb-4",

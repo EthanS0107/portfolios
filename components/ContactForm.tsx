@@ -12,22 +12,30 @@ const styles = {
 
   // Message de succès
   success:
-    "p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm dark:bg-green-900/30 dark:border-green-700 dark:text-green-300",
+    "p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm dark:bg-green-900/30 \
+    dark:border-green-700 dark:text-green-300",
 
   // Label des champs
   label: "block text-sm font-medium text-brand-text mb-2",
 
   // Champs input et textarea
   input:
-    "w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200",
+    "w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text \
+    focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary \
+    transition-all dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200",
 
   // Textarea spécifique
   textarea:
-    "w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all resize-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200",
+    "w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text \
+    focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary \
+    transition-all dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200",
 
   // Bouton d'envoi
   button:
-    "w-full inline-flex items-center justify-center gap-2 rounded-lg bg-brand-primary px-6 py-3 text-white font-medium hover:bg-brand-primary/90 focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed group dark:bg-teal-600",
+    "w-full inline-flex items-center justify-center gap-2 rounded-lg bg-brand-primary px-6 py-3 \
+    text-white font-medium hover:bg-brand-primary/90 focus:outline-none focus:ring-2 \
+    focus:ring-brand-primary/30 focus:ring-offset-2 transition-all disabled:opacity-50 \
+    disabled:cursor-not-allowed group dark:bg-teal-600",
 
   // Spinner de chargement
   spinner:
