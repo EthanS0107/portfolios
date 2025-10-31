@@ -5,6 +5,36 @@ export const metadata = {
   description: "Mes compétences techniques en développement web et logiciel",
 };
 
+// ======
+// STYLES
+// ======
+
+const styles = {
+  // Conteneur principal
+  container:
+    "min-h-screen bg-gradient-to-b from-white to-brand-muted/20 dark:from-gray-900 dark:to-gray-800",
+
+  // Section Hero
+  heroSection: "py-20 px-4",
+  heroContainer: "container mx-auto max-w-6xl",
+  heroContent: "space-y-4",
+
+  // Titre principal
+  title:
+    "text-5xl md:text-6xl font-light tracking-tight text-brand-text dark:text-gray-100",
+
+  // Barre décorative
+  divider: "w-20 h-1 bg-brand-primary rounded-full",
+
+  // Description
+  description:
+    "text-xl text-brand-text/70 max-w-2xl font-light dark:text-gray-300",
+
+  // Section des compétences
+  skillsSection: "pb-20 px-4",
+  skillsContainer: "container mx-auto max-w-6xl space-y-12",
+};
+
 export default function SkillsPage() {
   const skillCategories = [
     {
@@ -53,16 +83,14 @@ export default function SkillsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-brand-muted/20 dark:from-gray-900 dark:to-gray-800">
+    <div className={styles.container}>
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="space-y-4">
-            <h1 className="text-5xl md:text-6xl font-light tracking-tight text-brand-text dark:text-gray-100">
-              Compétences
-            </h1>
-            <div className="w-20 h-1 bg-brand-primary rounded-full" />
-            <p className="text-xl text-brand-text/70 max-w-2xl font-light dark:text-gray-300">
+      <section className={styles.heroSection}>
+        <div className={styles.heroContainer}>
+          <div className={styles.heroContent}>
+            <h1 className={styles.title}>Compétences</h1>
+            <div className={styles.divider} />
+            <p className={styles.description}>
               Un aperçu de mes compétences techniques et soft skills développées
               au fil de mes projets et formations.
             </p>
@@ -71,8 +99,8 @@ export default function SkillsPage() {
       </section>
 
       {/* Skills Categories */}
-      <section className="pb-20 px-4">
-        <div className="container mx-auto max-w-6xl space-y-12">
+      <section className={styles.skillsSection}>
+        <div className={styles.skillsContainer}>
           {skillCategories.map((category, index) => (
             <SkillCategory key={index} category={category} />
           ))}

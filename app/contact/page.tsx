@@ -6,18 +6,67 @@ export const metadata = {
   description: "Contactez-moi pour discuter de vos projets ou opportunités",
 };
 
+// ======
+// STYLES
+// ======
+
+const styles = {
+  // Conteneur principal
+  container:
+    "min-h-screen bg-gradient-to-b from-white to-brand-muted/20 dark:from-gray-900 dark:to-gray-800",
+
+  // Section Hero
+  heroSection: "py-20 px-4",
+  heroContainer: "container mx-auto max-w-6xl",
+  heroContent: "space-y-4",
+  title:
+    "text-5xl md:text-6xl font-light tracking-tight text-brand-text dark:text-gray-100",
+  divider: "w-20 h-1 bg-brand-primary rounded-full",
+  description:
+    "text-xl text-brand-text/70 max-w-2xl font-light dark:text-gray-300",
+
+  // Section Contact
+  contactSection: "pb-20 px-4",
+  contactContainer: "container mx-auto max-w-6xl",
+  contactGrid: "grid lg:grid-cols-2 gap-12",
+
+  // Infos de contact
+  infoContainer: "space-y-8",
+  infoTitle: "text-2xl font-light text-brand-text mb-6 dark:text-gray-100",
+  infoList: "space-y-6",
+
+  // Item de contact
+  contactItem: "flex items-start gap-4 group",
+  iconBox:
+    "p-3 bg-brand-primary/10 rounded-lg group-hover:bg-brand-primary/20 transition-colors dark:bg-teal-900/30 dark:group-hover:bg-teal-900/40",
+  icon: "text-brand-primary dark:text-teal-400",
+  itemTitle: "font-medium text-brand-text mb-1 dark:text-gray-200",
+  itemLink:
+    "text-brand-text/70 hover:text-brand-primary transition-colors dark:text-gray-300 dark:hover:text-teal-400",
+  itemText: "text-brand-text/70 dark:text-gray-300",
+
+  // Carte de disponibilité
+  availabilityCard:
+    "bg-brand-primary/5 p-6 rounded-lg border border-brand-primary/10 dark:bg-gray-800/50 dark:border-gray-700",
+  availabilityTitle: "font-medium text-brand-text mb-2 dark:text-gray-200",
+  availabilityText: "text-brand-text/70 text-sm dark:text-gray-300",
+
+  // Formulaire
+  formContainer:
+    "bg-white p-8 rounded-lg shadow-sm border border-brand-muted/30 dark:bg-gray-900/50 dark:border-gray-700 dark:shadow-none",
+  formTitle: "text-2xl font-light text-brand-text mb-6 dark:text-gray-100",
+};
+
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-brand-muted/20 dark:from-gray-900 dark:to-gray-800">
+    <div className={styles.container}>
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="space-y-4">
-            <h1 className="text-5xl md:text-6xl font-light tracking-tight text-brand-text dark:text-gray-100">
-              Contact
-            </h1>
-            <div className="w-20 h-1 bg-brand-primary rounded-full" />
-            <p className="text-xl text-brand-text/70 max-w-2xl font-light dark:text-gray-300">
+      <section className={styles.heroSection}>
+        <div className={styles.heroContainer}>
+          <div className={styles.heroContent}>
+            <h1 className={styles.title}>Contact</h1>
+            <div className={styles.divider} />
+            <p className={styles.description}>
               Proposition de votre projet, et offre de stage. Je suis ouvert à
               toute discussion.
             </p>
@@ -26,31 +75,24 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="pb-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12">
+      <section className={styles.contactSection}>
+        <div className={styles.contactContainer}>
+          <div className={styles.contactGrid}>
             {/* Contact Info */}
-            <div className="space-y-8">
+            <div className={styles.infoContainer}>
               <div>
-                <h2 className="text-2xl font-light text-brand-text mb-6 dark:text-gray-100">
-                  Informations de contact
-                </h2>
-                <div className="space-y-6">
+                <h2 className={styles.infoTitle}>Informations de contact</h2>
+                <div className={styles.infoList}>
                   {/* Email */}
-                  <div className="flex items-start gap-4 group">
-                    <div className="p-3 bg-brand-primary/10 rounded-lg group-hover:bg-brand-primary/20 transition-colors dark:bg-teal-900/30 dark:group-hover:bg-teal-900/40">
-                      <Mail
-                        className="text-brand-primary dark:text-teal-400"
-                        size={24}
-                      />
+                  <div className={styles.contactItem}>
+                    <div className={styles.iconBox}>
+                      <Mail className={styles.icon} size={24} />
                     </div>
                     <div>
-                      <h3 className="font-medium text-brand-text mb-1 dark:text-gray-200">
-                        Email
-                      </h3>
+                      <h3 className={styles.itemTitle}>Email</h3>
                       <a
-                        href="mailto:ethan.serville@example.com"
-                        className="text-brand-text/70 hover:text-brand-primary transition-colors dark:text-gray-300 dark:hover:text-teal-400"
+                        href="mailto:ethanserville@gmail.com"
+                        className={styles.itemLink}
                       >
                         ethanserville@gmail.com
                       </a>
@@ -58,40 +100,28 @@ export default function ContactPage() {
                   </div>
 
                   {/* Location */}
-                  <div className="flex items-start gap-4 group">
-                    <div className="p-3 bg-brand-primary/10 rounded-lg group-hover:bg-brand-primary/20 transition-colors dark:bg-teal-900/30 dark:group-hover:bg-teal-900/40">
-                      <MapPin
-                        className="text-brand-primary dark:text-teal-400"
-                        size={24}
-                      />
+                  <div className={styles.contactItem}>
+                    <div className={styles.iconBox}>
+                      <MapPin className={styles.icon} size={24} />
                     </div>
                     <div>
-                      <h3 className="font-medium text-brand-text mb-1 dark:text-gray-200">
-                        Localisation
-                      </h3>
-                      <p className="text-brand-text/70 dark:text-gray-300">
-                        Reims, France
-                      </p>
+                      <h3 className={styles.itemTitle}>Localisation</h3>
+                      <p className={styles.itemText}>Reims, France</p>
                     </div>
                   </div>
 
                   {/* LinkedIn */}
-                  <div className="flex items-start gap-4 group">
-                    <div className="p-3 bg-brand-primary/10 rounded-lg group-hover:bg-brand-primary/20 transition-colors dark:bg-teal-900/30 dark:group-hover:bg-teal-900/40">
-                      <Linkedin
-                        className="text-brand-primary dark:text-teal-400"
-                        size={24}
-                      />
+                  <div className={styles.contactItem}>
+                    <div className={styles.iconBox}>
+                      <Linkedin className={styles.icon} size={24} />
                     </div>
                     <div>
-                      <h3 className="font-medium text-brand-text mb-1 dark:text-gray-200">
-                        LinkedIn
-                      </h3>
+                      <h3 className={styles.itemTitle}>LinkedIn</h3>
                       <a
                         href="https://linkedin.com/ethan-serville"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-brand-text/70 hover:text-brand-primary transition-colors dark:text-gray-300 dark:hover:text-teal-400"
+                        className={styles.itemLink}
                       >
                         Ethan Serville
                       </a>
@@ -99,22 +129,17 @@ export default function ContactPage() {
                   </div>
 
                   {/* GitHub */}
-                  <div className="flex items-start gap-4 group">
-                    <div className="p-3 bg-brand-primary/10 rounded-lg group-hover:bg-brand-primary/20 transition-colors dark:bg-teal-900/30 dark:group-hover:bg-teal-900/40">
-                      <Github
-                        className="text-brand-primary dark:text-teal-400"
-                        size={24}
-                      />
+                  <div className={styles.contactItem}>
+                    <div className={styles.iconBox}>
+                      <Github className={styles.icon} size={24} />
                     </div>
                     <div>
-                      <h3 className="font-medium text-brand-text mb-1 dark:text-gray-200">
-                        GitHub
-                      </h3>
+                      <h3 className={styles.itemTitle}>GitHub</h3>
                       <a
                         href="https://github.com/EthanS0107"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-brand-text/70 hover:text-brand-primary transition-colors dark:text-gray-300 dark:hover:text-teal-400"
+                        className={styles.itemLink}
                       >
                         EthanS0107
                       </a>
@@ -124,11 +149,9 @@ export default function ContactPage() {
               </div>
 
               {/* Additional Info */}
-              <div className="bg-brand-primary/5 p-6 rounded-lg border border-brand-primary/10 dark:bg-gray-800/50 dark:border-gray-700">
-                <h3 className="font-medium text-brand-text mb-2 dark:text-gray-200">
-                  Disponibilité
-                </h3>
-                <p className="text-brand-text/70 text-sm dark:text-gray-300">
+              <div className={styles.availabilityCard}>
+                <h3 className={styles.availabilityTitle}>Disponibilité</h3>
+                <p className={styles.availabilityText}>
                   Actuellement en recherche de stage dans le développement (web,
                   application et logiciel) à partir du 7 avril pour une durée de
                   8 à 12 semaines.
@@ -137,10 +160,8 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-brand-muted/30 dark:bg-gray-900/50 dark:border-gray-700 dark:shadow-none">
-              <h2 className="text-2xl font-light text-brand-text mb-6 dark:text-gray-100">
-                Envoyez-moi un message
-              </h2>
+            <div className={styles.formContainer}>
+              <h2 className={styles.formTitle}>Envoyez-moi un message</h2>
               <ContactForm />
             </div>
           </div>

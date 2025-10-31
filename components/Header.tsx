@@ -1,12 +1,63 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+
+// ======
+// STYLES
+// ======
+
+const styles = {
+  // Barre de navigation principale
+  header:
+    "sticky top-0 z-50 border-b border-brand-muted/50 bg-brand-surface/95 backdrop-blur-lg supports-[backdrop-filter]:bg-brand-surface/95 dark:bg-gray-900/95 dark:border-gray-700/50 shadow-sm",
+
+  // Logo
+  logo: "flex items-center group transition-transform hover:scale-105 duration-200 relative z-50",
+
+  // Liens de navigation (état normal)
+  navLink:
+    "relative px-3 md:px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all duration-200 ease-in-out text-brand-text/70 dark:text-gray-400 hover:text-brand-primary dark:hover:text-teal-400 hover:bg-brand-primary/5 dark:hover:bg-gray-800/50",
+
+  // Liens de navigation (état actif/sélectionné)
+  navLinkActive:
+    "relative px-3 md:px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all duration-200 ease-in-out text-brand-primary dark:text-teal-400 bg-brand-primary/10 dark:bg-teal-900/30",
+
+  // Indicateur sous le lien actif
+  activeIndicator:
+    "absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-brand-primary dark:bg-teal-400 rounded-full",
+
+  // Bouton burger
+  burgerButton:
+    "p-2 rounded-lg text-brand-text dark:text-gray-200 hover:bg-brand-primary/10 dark:hover:bg-gray-800 transition-colors",
+
+  // Overlay sombre derrière le menu mobile
+  overlay: "lg:hidden fixed top-[73px] inset-x-0 bottom-0 bg-black/30 z-30",
+
+  // Panneau du menu mobile
+  mobileMenu:
+    "lg:hidden fixed top-[73px] right-0 h-[calc(100vh-73px)] w-64 bg-brand-surface dark:bg-gray-900 border-l border-brand-muted/50 dark:border-gray-700/50 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out",
+
+  // Liens dans le menu mobile (état normal)
+  mobileNavLink:
+    "relative px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ease-in-out text-brand-text/70 dark:text-gray-400 hover:text-brand-primary dark:hover:text-teal-400 hover:bg-brand-primary/5 dark:hover:bg-gray-800/50",
+
+  // Liens dans le menu mobile (état actif)
+  mobileNavLinkActive:
+    "relative px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ease-in-out text-brand-primary dark:text-teal-400 bg-brand-primary/10 dark:bg-teal-900/30",
+
+  // Point indicateur dans le menu mobile
+  mobileActiveIndicator:
+    "w-2 h-2 rounded-full bg-brand-primary dark:bg-teal-400",
+};
 
 export default function Header() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { href: "/projects", label: "Projets" },
@@ -15,14 +66,14 @@ export default function Header() {
     { href: "/contact", label: "Contact" },
   ];
 
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-muted/50 bg-brand-surface/80 backdrop-blur-lg supports-[backdrop-filter]:bg-brand-surface/60 dark:bg-gray-900/80 dark:border-gray-700/50 shadow-sm">
+    <header className={styles.header}>
       <div className="container py-4 px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center group transition-transform hover:scale-105 duration-200"
-        >
+        <Link href="/" className={styles.logo} onClick={closeMenu}>
           <div className="relative h-10 w-auto">
             <Image
               src="/logo.svg"
@@ -35,28 +86,18 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* Navigation */}
-        <nav className="flex items-center gap-1 md:gap-2">
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center gap-1 md:gap-2">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`
-                  relative px-3 md:px-4 py-2 text-sm md:text-base font-medium rounded-lg
-                  transition-all duration-200 ease-in-out
-                  ${
-                    isActive
-                      ? "text-brand-primary dark:text-teal-400 bg-brand-primary/10 dark:bg-teal-900/30"
-                      : "text-brand-text/70 dark:text-gray-400 hover:text-brand-primary dark:hover:text-teal-400 hover:bg-brand-primary/5 dark:hover:bg-gray-800/50"
-                  }
-                `}
+                className={isActive ? styles.navLinkActive : styles.navLink}
               >
                 {item.label}
-                {isActive && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-brand-primary dark:bg-teal-400 rounded-full" />
-                )}
+                {isActive && <span className={styles.activeIndicator} />}
               </Link>
             );
           })}
@@ -67,7 +108,52 @@ export default function Header() {
           {/* Theme Toggle */}
           <ThemeToggle />
         </nav>
+
+        {/* Mobile Menu Button & Theme Toggle */}
+        <div className="flex lg:hidden items-center gap-3 relative z-50">
+          <ThemeToggle />
+          <button
+            onClick={toggleMenu}
+            className={styles.burgerButton}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && <div className={styles.overlay} onClick={closeMenu} />}
+
+      {/* Mobile Menu */}
+      <nav
+        className={`${styles.mobileMenu} ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col p-6 space-y-2">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={closeMenu}
+                className={
+                  isActive ? styles.mobileNavLinkActive : styles.mobileNavLink
+                }
+              >
+                <span className="flex items-center justify-between">
+                  {item.label}
+                  {isActive && (
+                    <span className={styles.mobileActiveIndicator} />
+                  )}
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
     </header>
   );
 }

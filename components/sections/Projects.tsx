@@ -1,6 +1,25 @@
 "use client";
 import { motion } from "framer-motion";
 
+// ======
+// STYLES
+// ======
+
+const styles = {
+  section: "py-20 bg-brand-surface",
+  container: "container mx-auto px-4",
+  title: "text-4xl font-bold text-brand-text mb-12 text-center",
+  grid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
+  card: "rounded-lg overflow-hidden border border-brand-muted bg-brand-surface",
+  imageContainer: "relative aspect-video",
+  image: "object-cover w-full h-full",
+  cardContent: "p-6",
+  cardTitle: "text-xl font-bold text-brand-text mb-2",
+  cardDescription: "text-brand-text/80 mb-4",
+  techContainer: "flex flex-wrap gap-2",
+  techTag: "px-3 py-1 bg-brand-muted/40 text-brand-text rounded-full text-sm",
+};
+
 const projects = [
   {
     title: "Projet 1",
@@ -21,45 +40,38 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-20 bg-brand-surface">
-      <div className="container mx-auto px-4">
+    <section className={styles.section}>
+      <div className={styles.container}>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-4xl font-bold text-brand-text mb-12 text-center">
-            Projets
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className={styles.title}>Projets</h2>
+          <div className={styles.grid}>
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-lg overflow-hidden border border-brand-muted bg-brand-surface"
+                className={styles.card}
               >
-                <div className="relative aspect-video">
+                <div className={styles.imageContainer}>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="object-cover w-full h-full"
+                    className={styles.image}
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-brand-text mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-brand-text/80 mb-4">
+                <div className={styles.cardContent}>
+                  <h3 className={styles.cardTitle}>{project.title}</h3>
+                  <p className={styles.cardDescription}>
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className={styles.techContainer}>
                     {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-brand-muted/40 text-brand-text rounded-full text-sm"
-                      >
+                      <span key={tech} className={styles.techTag}>
                         {tech}
                       </span>
                     ))}

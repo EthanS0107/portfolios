@@ -2,6 +2,44 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 
+// ======
+// STYLES
+// ======
+
+const styles = {
+  // Formulaire principal
+  form: "space-y-6",
+
+  // Message de succès
+  success:
+    "p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm dark:bg-green-900/30 dark:border-green-700 dark:text-green-300",
+
+  // Label des champs
+  label: "block text-sm font-medium text-brand-text mb-2",
+
+  // Champs input et textarea
+  input:
+    "w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200",
+
+  // Textarea spécifique
+  textarea:
+    "w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all resize-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200",
+
+  // Bouton d'envoi
+  button:
+    "w-full inline-flex items-center justify-center gap-2 rounded-lg bg-brand-primary px-6 py-3 text-white font-medium hover:bg-brand-primary/90 focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed group dark:bg-teal-600",
+
+  // Spinner de chargement
+  spinner:
+    "w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin",
+
+  // Icône Send avec animation
+  sendIcon: "group-hover:translate-x-1 transition-transform",
+
+  // Note en bas du formulaire
+  note: "text-xs text-brand-text/50 text-center",
+};
+
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -27,20 +65,17 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className={styles.form}>
       {/* Success Message */}
       {submitted && (
-        <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm dark:bg-green-900/30 dark:border-green-700 dark:text-green-300">
+        <div className={styles.success}>
           ✓ Message envoyé avec succès ! Je vous répondrai bientôt.
         </div>
       )}
 
       {/* Name Field */}
       <div>
-        <label
-          htmlFor="name"
-          className="block text-sm font-medium text-brand-text mb-2"
-        >
+        <label htmlFor="name" className={styles.label}>
           Nom complet *
         </label>
         <input
@@ -49,17 +84,14 @@ export default function ContactForm() {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
+          className={styles.input}
           placeholder="Jean Martin"
         />
       </div>
 
       {/* Email Field */}
       <div>
-        <label
-          htmlFor="email"
-          className="block text-sm font-medium text-brand-text mb-2"
-        >
+        <label htmlFor="email" className={styles.label}>
           Email *
         </label>
         <input
@@ -68,17 +100,14 @@ export default function ContactForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
+          className={styles.input}
           placeholder="jean.martin@example.com"
         />
       </div>
 
       {/* Message Field */}
       <div>
-        <label
-          htmlFor="message"
-          className="block text-sm font-medium text-brand-text mb-2"
-        >
+        <label htmlFor="message" className={styles.label}>
           Message *
         </label>
         <textarea
@@ -86,37 +115,28 @@ export default function ContactForm() {
           required
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full rounded-lg border border-brand-muted/50 px-4 py-3 bg-brand-surface text-brand-text focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary transition-all resize-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
+          className={styles.textarea}
           rows={6}
           placeholder="Bonjour, ..."
         />
       </div>
 
       {/* Submit Button */}
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-brand-primary px-6 py-3 text-white font-medium hover:bg-brand-primary/90 focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed group dark:bg-teal-600"
-      >
+      <button type="submit" disabled={isSubmitting} className={styles.button}>
         {isSubmitting ? (
           <>
-            <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+            <div className={styles.spinner} />
             <span>Envoi en cours...</span>
           </>
         ) : (
           <>
             <span>Envoyer le message</span>
-            <Send
-              size={18}
-              className="group-hover:translate-x-1 transition-transform"
-            />
+            <Send size={18} className={styles.sendIcon} />
           </>
         )}
       </button>
 
-      <p className="text-xs text-brand-text/50 text-center">
-        * Champs obligatoires
-      </p>
+      <p className={styles.note}>* Champs obligatoires</p>
     </form>
   );
 }
