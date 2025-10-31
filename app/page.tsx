@@ -114,7 +114,7 @@ export default function Home() {
         <div className={styles.profileContainer}>
           <div className={styles.profileImage}>
             <Image
-              src="/profile-placeholder.jpg"
+              src="/profile-placeholder.svg"
               alt="Photo de profil"
               fill
               className="object-cover object-center"
