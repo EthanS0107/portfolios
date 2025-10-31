@@ -42,6 +42,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="fr" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        {/* Google site verification */}
+        <meta
+          name="google-site-verification"
+          content="6BG2WHT3F_xzbJe7s8B_qmFeXQzt2K9S8dEP5EsRyqw"
+        />
         {/* JSON-LD: Schema.org Person for better indexing */}
         <script type="application/ld+json">
           {`{
