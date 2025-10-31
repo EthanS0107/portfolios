@@ -19,7 +19,7 @@
     "id": "3",
     "title": "Portfolio Personnel",
     "description": "Site portfolio",
-    "repo": "https://github.com",
+    "repo": "https://github.com/EthanS0107/portfolios",
     "demo": "",
     "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
   },
