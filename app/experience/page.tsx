@@ -48,7 +48,11 @@ export default function ExperiencePage() {
     ...item,
     type: "education" as const,
   }));
-  const experience = data.experience.map((item) => ({
+  // Garder les données en réserve pour réactiver la section plus tard.
+  // La déclaration ci‑dessous est volontairement non utilisée pour l'instant.
+  // Désactiver la règle ESLint juste pour cette ligne afin d'éviter l'erreur de build.
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _experience = data.experience.map((item) => ({
     ...item,
     type: "work" as const,
   }));

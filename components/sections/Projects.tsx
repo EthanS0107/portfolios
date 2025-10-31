@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // ======
 // STYLES
@@ -58,10 +59,12 @@ export default function Projects() {
                 className={styles.card}
               >
                 <div className={styles.imageContainer}>
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
+                    fill
                     className={styles.image}
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <div className={styles.cardContent}>

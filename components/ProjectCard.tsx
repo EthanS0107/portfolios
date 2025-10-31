@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
 
 type Project = {
@@ -87,10 +88,12 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* Image placeholder ou gradient */}
       <div className={styles.imageContainer}>
         {project.image ? (
-          <img
+          <Image
             src={project.image}
             alt={project.title}
+            fill
             className={styles.image}
+            sizes="(max-width: 768px) 100vw, 33vw"
           />
         ) : (
           <div className={styles.placeholder}>
