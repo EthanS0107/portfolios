@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const styles = {
   // Section principale
-  section: "py-10",
+  section: "min-h-[calc(100vh-73px-80px)] flex flex-col justify-center py-10",
 
   // Grille principale
   grid: "grid gap-10 md:grid-cols-12 items-center",
