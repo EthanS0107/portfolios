@@ -52,7 +52,7 @@ export default function ContactPage() {
                         href="mailto:ethan.serville@example.com"
                         className="text-brand-text/70 hover:text-brand-primary transition-colors dark:text-gray-300 dark:hover:text-teal-400"
                       >
-                        ethanserville@gmaiL.com
+                        ethanserville@gmail.com
                       </a>
                     </div>
                   </div>
