@@ -70,7 +70,7 @@ export default function ContactPage() {
                         Localisation
                       </h3>
                       <p className="text-brand-text/70 dark:text-gray-300">
-                        Paris, France
+                        Reims, France
                       </p>
                     </div>
                   </div>
@@ -88,12 +88,12 @@ export default function ContactPage() {
                         LinkedIn
                       </h3>
                       <a
-                        href="https://linkedin.com"
+                        href="https://linkedin.com/ethan-serville"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-brand-text/70 hover:text-brand-primary transition-colors dark:text-gray-300 dark:hover:text-teal-400"
                       >
-                        linkedin.com/in/ethan-serville
+                        Ethan Serville
                       </a>
                     </div>
                   </div>
@@ -111,12 +111,12 @@ export default function ContactPage() {
                         GitHub
                       </h3>
                       <a
-                        href="https://github.com"
+                        href="https://github.com/EthanS0107"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-brand-text/70 hover:text-brand-primary transition-colors dark:text-gray-300 dark:hover:text-teal-400"
                       >
-                        github.com/ethan-serville
+                        EthanS0107
                       </a>
                     </div>
                   </div>
