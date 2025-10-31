@@ -1,0 +1,19 @@
+<svg width="240" height="40" viewBox="0 0 240 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Version Dark Mode : couleurs claires pour fond sombre -->
+  
+  <!-- Nom en typographie fine et élégante -->
+  <text x="0" y="26" 
+        font-family="'Inter', 'SF Pro Display', system-ui, -apple-system, sans-serif" 
+        font-size="24" 
+        font-weight="300" 
+        letter-spacing="1.5"
+        fill="#e5e7eb">
+    ETHAN SERVILLE
+  </text>
+  
+  <!-- Ligne minimaliste sous le nom (couleur teal pour le dark mode) -->
+  <line x1="0" y1="32" x2="50" y2="32" 
+        stroke="#5eead4" 
+        stroke-width="1.5" 
+        stroke-linecap="round"/>
+</svg>

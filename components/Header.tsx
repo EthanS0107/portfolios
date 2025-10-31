@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
@@ -65,6 +66,7 @@ const styles = {
 
 export default function Header() {
   const pathname = usePathname();
+  const { theme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -84,7 +86,7 @@ export default function Header() {
         <Link href="/" className={styles.logo} onClick={closeMenu}>
           <div className="relative h-10 w-auto">
             <Image
-              src="/logo.svg"
+              src={theme === "dark" ? "/logo-dark.svg" : "/logo.svg"}
               alt="Ethan Serville"
               width={180}
               height={40}
