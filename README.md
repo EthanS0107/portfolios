@@ -1,6 +1,6 @@
 # Portfolio - Ethan Serville# Portfolio
 
-Portfolio personnel moderne et responsive développé avec **Next.js 14**, **TypeScript** et **Tailwind CSS**. Présente mes projets, compétences et parcours professionnel avec un design élégant et une expérience utilisateur optimale.Ce dépôt contient une structure de base pour un portfolio d'étudiant en informatique, créé avec Next.js (App Router), TypeScript et Tailwind CSS.
+Portfolio personnel moderne et responsive développé avec **Next.js 14**, **TypeScript** et **Tailwind CSS**. Présente mes projets, compétences et parcours professionnel.
 
 ## FonctionnalitésInstall:
 
@@ -18,9 +18,11 @@ Portfolio personnel moderne et responsive développé avec **Next.js 14**, **Typ
 
 - **Styles organisés** : Toutes les classes Tailwind extraites dans des objets constants pour une personnalisation facile```powershell
 
-npm run dev
+## Démarrage rapide
 
-## Démarrage rapide```
+```bash
+npm run dev
+```
 
 ### PrérequisBuild:
 
@@ -28,9 +30,11 @@ npm run dev
 
 - npm ou yarnnpm run build
 
-npm start
+### Installation
 
-### Installation```
+```bash
+npm start
+```
 
 ```bashRemarques:
 
