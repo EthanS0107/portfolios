@@ -1,4 +1,4 @@
-# 🎨 Portfolio - Ethan Serville# Portfolio
+# Portfolio - Ethan Serville# Portfolio
 
 Portfolio personnel moderne et responsive développé avec **Next.js 14**, **TypeScript** et **Tailwind CSS**. Présente mes projets, compétences et parcours professionnel avec un design élégant et une expérience utilisateur optimale.Ce dépôt contient une structure de base pour un portfolio d'étudiant en informatique, créé avec Next.js (App Router), TypeScript et Tailwind CSS.
 
