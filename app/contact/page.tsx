@@ -18,8 +18,8 @@ export default function ContactPage() {
             </h1>
             <div className="w-20 h-1 bg-brand-primary rounded-full" />
             <p className="text-xl text-brand-text/70 max-w-2xl font-light dark:text-gray-300">
-              Discutons de votre projet. Je suis toujours ouvert à de nouvelles
-              opportunités et collaborations.
+              Proposition de votre projet, et offre de stage. Je suis ouvert à
+              toute discussion.
             </p>
           </div>
         </div>
@@ -129,8 +129,9 @@ export default function ContactPage() {
                   Disponibilité
                 </h3>
                 <p className="text-brand-text/70 text-sm dark:text-gray-300">
-                  Actuellement disponible pour des missions freelance et des
-                  opportunités en CDI. Temps de réponse habituel : 24-48h.
+                  Actuellement en recherche de stage dans le développement (web,
+                  application et logiciel) à partir du 7 avril pour une durée de
+                  8 à 12 semaines.
                 </p>
               </div>
             </div>
