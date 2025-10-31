@@ -5,9 +5,34 @@ import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata = {
-  title: "Portfolio - Étudiant en informatique",
+  title: "Ethan Serville — Portfolio",
   description:
-    "Portfolio d'un étudiant en informatique — projets, compétences, formation et contact.",
+    "Portfolio d'Ethan Serville — projets, compétences, formation et contact.",
+  applicationName: "Ethan Serville — Portfolio",
+  authors: [{ name: "Ethan Serville" }],
+  openGraph: {
+    title: "Ethan Serville — Portfolio",
+    description:
+      "Portfolio d'Ethan Serville — projets, compétences, formation et contact.",
+    url: "https://example.com",
+    siteName: "Ethan Serville",
+    images: [
+      {
+        url: "https://example.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Ethan Serville — Portfolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ethan Serville — Portfolio",
+    description:
+      "Portfolio d'Ethan Serville — projets, compétences, formation et contact.",
+    images: ["https://example.com/og-image.png"],
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -15,6 +40,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="fr" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        {/* JSON-LD: Schema.org Person for better indexing */}
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Ethan Serville",
+            "url": "https://example.com",
+            "sameAs": [
+              "https://github.com/EthanS0107"
+            ]
+          }`}
+        </script>
       </head>
       <body>
         <ThemeProvider>
