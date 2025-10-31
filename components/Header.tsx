@@ -41,11 +41,11 @@ const styles = {
     "p-2 rounded-lg text-brand-text dark:text-gray-200 hover:bg-brand-primary/10 dark:hover:bg-gray-800 transition-colors",
 
   // Overlay sombre derrière le menu mobile
-  overlay: "lg:hidden fixed top-[73px] inset-x-0 bottom-0 bg-black/30 z-30",
+  overlay: "md:hidden fixed top-[73px] inset-x-0 bottom-0 bg-black/30 z-30",
 
   // Panneau du menu mobile
   mobileMenu:
-    "lg:hidden fixed top-[73px] right-0 h-[calc(100vh-73px)] w-64 bg-brand-surface dark:bg-gray-900 \
+    "md:hidden fixed top-[73px] right-0 h-[calc(100vh-73px)] w-64 bg-brand-surface dark:bg-gray-900 \
     border-l border-brand-muted/50 dark:border-gray-700/50 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out",
 
   // Liens dans le menu mobile (état normal)
@@ -95,7 +95,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-1 md:gap-2">
+        <nav className="hidden md:flex items-center gap-1 md:gap-2">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -118,7 +118,7 @@ export default function Header() {
         </nav>
 
         {/* Mobile Menu Button & Theme Toggle */}
-        <div className="flex lg:hidden items-center gap-3 relative z-50">
+        <div className="flex md:hidden items-center gap-3 relative z-50">
           <ThemeToggle />
           <button
             onClick={toggleMenu}
