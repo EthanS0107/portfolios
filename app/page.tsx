@@ -10,7 +10,7 @@ const styles = {
   section: "min-h-[calc(100vh-73px-80px)] flex flex-col justify-center py-10",
 
   // Grille principale
-  grid: "grid gap-10 md:grid-cols-12 items-center",
+  grid: "flex flex-col md:grid md:grid-cols-12 gap-8 md:gap-10 items-center",
 
   // Badge "Portfolio"
   badge:
@@ -18,16 +18,17 @@ const styles = {
 
   // Titre principal
   title:
-    "mt-4 text-4xl md:text-5xl font-extrabold leading-tight text-brand-text dark:text-gray-100",
+    "mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-brand-text dark:text-gray-100 text-center md:text-left",
 
   // Nom en surbrillance
   name: "text-brand-primary dark:text-teal-400",
 
   // Description/sous-titre
-  subtitle: "mt-4 text-lg text-brand-text/80 dark:text-gray-300",
+  subtitle:
+    "mt-4 text-base md:text-lg text-brand-text/80 dark:text-gray-300 text-center md:text-left",
 
   // Conteneur des boutons CTA
-  ctaContainer: "mt-6 flex flex-wrap gap-3",
+  ctaContainer: "mt-6 flex flex-wrap gap-3 justify-center md:justify-start",
 
   // Bouton principal (Voir mes projets)
   primaryButton:
@@ -39,13 +40,14 @@ const styles = {
 
   // Liens sociaux
   socialLinks:
-    "mt-6 flex flex-wrap gap-4 text-sm text-brand-text/70 dark:text-gray-400",
+    "mt-6 flex flex-wrap gap-4 text-sm text-brand-text/70 dark:text-gray-400 justify-center md:justify-start",
   socialLink: "hover:opacity-90",
 
   // Photo de profil
-  profileContainer: "md:col-span-5 lg:col-span-5 flex md:justify-end",
+  profileContainer:
+    "order-first md:order-last md:col-span-5 lg:col-span-5 flex justify-center md:justify-end mb-6 md:mb-0",
   profileImage:
-    "relative w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-brand-muted shadow-sm dark:border-gray-700",
+    "relative w-40 h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-brand-muted shadow-lg dark:border-gray-700",
 
   // Bandeau d'infos
   infoGrid: "mt-12 grid gap-4 sm:grid-cols-3",
@@ -60,7 +62,7 @@ export default function Home() {
     <section className={styles.section}>
       <div className={styles.grid}>
         {/* Colonne texte */}
-        <div className="md:col-span-7 lg:col-span-7">
+        <div className="md:col-span-7 lg:col-span-7 flex flex-col items-center md:items-start">
           <span className={styles.badge}>Portfolio</span>
           <h1 className={styles.title}>
             Bonjour, je m&apos;appelle{" "}
