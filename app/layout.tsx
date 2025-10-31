@@ -14,11 +14,11 @@ export const metadata = {
     title: "Ethan Serville — Portfolio",
     description:
       "Portfolio d'Ethan Serville — projets, compétences, formation et contact.",
-    url: "https://example.com",
+    url: "https://ethan-serville-portfolios-sigma-six.vercel.app",
     siteName: "Ethan Serville",
     images: [
       {
-        url: "https://example.com/og-image.png",
+        url: "https://ethan-serville-portfolios-sigma-six.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Ethan Serville — Portfolio",
@@ -31,7 +31,9 @@ export const metadata = {
     title: "Ethan Serville — Portfolio",
     description:
       "Portfolio d'Ethan Serville — projets, compétences, formation et contact.",
-    images: ["https://example.com/og-image.png"],
+    images: [
+      "https://ethan-serville-portfolios-sigma-six.vercel.app/og-image.png",
+    ],
   },
 };
 
@@ -46,7 +48,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Ethan Serville",
-            "url": "https://example.com",
+            "url": "https://ethan-serville-portfolios-sigma-six.vercel.app",
             "sameAs": [
               "https://github.com/EthanS0107"
             ]

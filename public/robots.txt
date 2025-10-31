@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# Replace example.com with your real domain
-Sitemap: https://example.com/sitemap.xml
+# Sitemap for the deployed site
+Sitemap: https://ethan-serville-portfolios-sigma-six.vercel.app/sitemap.xml
