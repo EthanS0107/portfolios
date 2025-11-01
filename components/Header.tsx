@@ -47,7 +47,8 @@ const styles = {
   // Panneau du menu mobile
   mobileMenu:
     "md:hidden fixed top-[73px] right-0 h-[calc(100vh-73px)] w-64 bg-brand-surface dark:bg-gray-900 \
-    border-l border-brand-muted/50 dark:border-gray-700/50 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out",
+    border-l border-brand-muted/50 dark:border-gray-700/50 z-40 transform transition-transform \
+    transition-opacity duration-300 ease-in-out",
 
   // Liens dans le menu mobile (état normal)
   mobileNavLink:
@@ -137,8 +138,11 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <nav
+        aria-hidden={!isMenuOpen}
         className={`${styles.mobileMenu} ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
+          isMenuOpen
+            ? "translate-x-0 opacity-100 pointer-events-auto shadow-2xl"
+            : "translate-x-full opacity-0 pointer-events-none shadow-none"
         }`}
       >
         <div className="flex flex-col p-6 space-y-2">

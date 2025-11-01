@@ -48,19 +48,20 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           content="6BG2WHT3F_xzbJe7s8B_qmFeXQzt2K9S8dEP5EsRyqw"
         />
         {/* JSON-LD: Schema.org Person for better indexing */}
-        <script type="application/ld+json">
-          {`{
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Ethan Serville",
-            "url": "https://ethan-serville-portfolios-sigma-six.vercel.app",
-            "sameAs": [
-              "https://github.com/EthanS0107"
-            ]
-          }`}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Ethan Serville",
+              url: "https://ethan-serville-portfolios-sigma-six.vercel.app",
+              sameAs: ["https://github.com/EthanS0107"],
+            }),
+          }}
+        />
       </head>
-      <body>
+      <body className="overflow-x-hidden">
         <ThemeProvider>
           <Header />
           <main className="container py-8">{children}</main>
