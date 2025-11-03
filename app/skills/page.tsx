@@ -53,7 +53,6 @@ export default function SkillsPage() {
         { name: "React", level: 5 },
         { name: "Next.js", level: 5 },
         { name: "Node.js", level: 5 },
-        { name: "Express", level: 5 },
         { name: "Tailwind CSS", level: 5 },
         { name: "Symfony", level: 50 },
       ],
