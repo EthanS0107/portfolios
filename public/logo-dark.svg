@@ -1,19 +1,22 @@
-<svg width="240" height="40" viewBox="0 0 240 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Version Dark Mode : couleurs claires pour fond sombre -->
-  
-  <!-- Nom en typographie fine et élégante -->
-  <text x="0" y="26" 
-        font-family="'Inter', 'SF Pro Display', system-ui, -apple-system, sans-serif" 
-        font-size="24" 
-        font-weight="300" 
-        letter-spacing="1.5"
-        fill="#e5e7eb">
-    ETHAN SERVILLE
-  </text>
-  
-  <!-- Ligne minimaliste sous le nom (couleur teal pour le dark mode) -->
-  <line x1="0" y1="32" x2="50" y2="32" 
-        stroke="#5eead4" 
-        stroke-width="1.5" 
-        stroke-linecap="round"/>
+<svg width="280" height="56" viewBox="0 0 280 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ethan Serville logo (dark)">
+  <defs>
+    <linearGradient id="gAccentDark" x1="0" x2="1">
+      <stop offset="0%" stop-color="#FF6B61" />
+      <stop offset="100%" stop-color="#C53030" />
+    </linearGradient>
+    <style>
+      .titleD { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto; font-weight:700; font-size:20px; fill:#F8FAFC; }
+      .underlineD { stroke: url(#gAccentDark); stroke-width:3; stroke-linecap:round; fill:none; stroke-dasharray: 220; stroke-dashoffset: 220; animation: drawD 1s ease forwards 0.2s; }
+      .gradMoveD { animation: slideD 3s linear infinite; }
+      @keyframes drawD { to { stroke-dashoffset: 0; } }
+      @keyframes slideD { from { transform: translateX(-25%);} to { transform: translateX(25%);} }
+    </style>
+  </defs>
+
+  <rect width="100%" height="100%" fill="transparent" />
+
+  <!-- Text-only logo for dark mode with animated underline -->
+  <text x="8" y="34" class="titleD">ETHAN SERVILLE</text>
+  <path class="underlineD" d="M8 40 L220 40" />
+  <rect x="8" y="28" width="212" height="16" rx="8" fill="url(#gAccentDark)" opacity="0.03" class="gradMoveD" />
 </svg>
