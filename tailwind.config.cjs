@@ -30,6 +30,10 @@ module.exports = {
         center: true,
         padding: "1rem",
       },
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui"],
+        display: ["Oswald", "ui-serif", "serif"],
+      },
     },
   },
   plugins: [],
