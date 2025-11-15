@@ -10,10 +10,18 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          primary: "#5e787d", // couleur principale
-          muted: "#d9d9d9", // gris clair
-          text: "#545454", // gris foncé (texte)
-          surface: "#ffffff", // fond
+          primary: {
+            DEFAULT: "#5e787d",
+          },
+          muted: {
+            DEFAULT: "#d9d9d9",
+          },
+          text: {
+            DEFAULT: "#545454",
+          },
+          surface: {
+            DEFAULT: "#ffffff",
+          },
         },
       },
       container: {
