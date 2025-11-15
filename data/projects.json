@@ -6,6 +6,7 @@
     "description": "Reproduction simplifiée du jeu 'Pac-Man'",
     "repo": "https://github.com/EthanS0107/jeu_Pacman",
     "demo": "",
+    "launch": null,
     "tags": ["Python", "Tkinter"]
   },
   {
@@ -15,6 +16,7 @@
     "description": "Création d'une interface utilisateur, manipulation et modification d'une base de données",
     "repo": "https://github.com/EthanS0107/Steam-CRUD",
     "demo": "",
+    "launch": null,
     "tags": ["PHP", "HTML", "CSS", "SQL"]
   },
   {
@@ -24,6 +26,7 @@
     "description": "Site portfolio",
     "repo": "https://github.com/EthanS0107/portfolios",
     "demo": "",
+    "launch": null,
     "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
   },
   {
@@ -33,6 +36,7 @@
     "description": "En Cours... Reproduction du jeu de plateau Stratego",
     "repo": "https://github.com/EthanS0107/stratego",
     "demo": "",
+    "launch": null,
     "tags": ["C++"]
   }
 ]

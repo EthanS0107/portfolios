@@ -10,6 +10,7 @@ type Project = {
   description: string;
   repo?: string;
   demo?: string;
+  launch?: string | null;
   tags?: string[];
   image?: string | null;
 };
@@ -81,8 +82,14 @@ const styles = {
 
 export default function ProjectCard({ project }: { project: Project }) {
   const handleLaunch = () => {
+    const hasLaunch = project.launch && project.launch.trim().length > 0;
     const hasDemo = project.demo && project.demo.trim().length > 0;
     const hasRepo = project.repo && project.repo.trim().length > 0;
+
+    if (hasLaunch) {
+      window.open(project.launch as string, "_blank", "noopener,noreferrer");
+      return;
+    }
 
     if (hasDemo) {
       window.open(project.demo, "_blank", "noopener,noreferrer");
@@ -90,14 +97,12 @@ export default function ProjectCard({ project }: { project: Project }) {
     }
 
     if (hasRepo) {
-      // If no demo, open the repo so user can download/run locally
       window.open(project.repo, "_blank", "noopener,noreferrer");
       return;
     }
 
-    // Fallback: notify user there's no demo available
     alert(
-      "Aucune démo disponible pour ce projet. Consultez le dépôt pour les instructions d'exécution."
+      "Aucune démo ou lien de lancement disponible pour ce projet. Consultez le dépôt pour les instructions."
     );
   };
 
@@ -174,27 +179,19 @@ export default function ProjectCard({ project }: { project: Project }) {
             </a>
           )}
 
-          {/* Lancer / Play button */}
-          <button
-            type="button"
-            onClick={handleLaunch}
-            className={
-              project.demo?.trim() || project.repo?.trim()
-                ? styles.ctaButton
-                : styles.ctaDisabled
-            }
-            aria-label={`Lancer ${project.title}`}
-            title={
-              project.demo?.trim()
-                ? "Ouvrir la démo"
-                : project.repo?.trim()
-                ? "Ouvrir le dépôt"
-                : "Pas de démo disponible"
-            }
-          >
-            <Play size={16} />
-            <span>Lancer</span>
-          </button>
+          {/* Lancer / Play button: n'affiche que si `launch` est défini */}
+          {project.launch && project.launch.trim().length > 0 && (
+            <button
+              type="button"
+              onClick={handleLaunch}
+              className={styles.ctaButton}
+              aria-label={`Lancer ${project.title}`}
+              title={"Lancer la version en ligne"}
+            >
+              <Play size={16} />
+              <span>Lancer</span>
+            </button>
+          )}
         </div>
       </div>
 
