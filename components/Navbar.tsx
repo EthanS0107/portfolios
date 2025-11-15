@@ -12,7 +12,7 @@ const styles = {
 
   // État scrollé
   navScrolled:
-    "bg-brand-surface/90 backdrop-blur supports-[backdrop-filter]:bg-brand-surface/80 shadow",
+    "bg-brand-primary/95 text-white backdrop-blur-sm supports-[backdrop-filter]:bg-brand-primary/80 shadow-lg",
 
   // État transparent
   navTransparent: "bg-transparent",
@@ -24,7 +24,7 @@ const styles = {
   borderTransparent: "border-transparent",
 
   // Conteneur
-  container: "container mx-auto px-4 text-brand-text",
+  container: "container mx-auto px-4",
 
   // Flex wrapper
   flexWrapper: "flex items-center justify-between h-16",
@@ -33,10 +33,10 @@ const styles = {
   logo: "text-xl font-bold hover:opacity-90",
 
   // Menu desktop
-  menu: "hidden md:flex space-x-8",
+  menu: "hidden md:flex space-x-8 items-center",
 
   // Lien de navigation
-  link: "text-brand-primary hover:opacity-90 transition-opacity",
+  link: "hover:opacity-95 transition-opacity px-2 py-1 rounded-md hover:underline",
 };
 
 export default function Navbar() {

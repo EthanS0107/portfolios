@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
+import { ArrowUpRight, Github, ExternalLink, Play } from "lucide-react";
 
 type Project = {
   id: string | number;
@@ -11,7 +11,7 @@ type Project = {
   repo?: string;
   demo?: string;
   tags?: string[];
-  image?: string;
+  image?: string | null;
 };
 
 // ======
@@ -25,11 +25,11 @@ const styles = {
 
   // Zone d'image/gradient
   imageContainer:
-    "relative h-48 bg-gradient-to-br from-brand-primary/20 via-brand-muted/30 to-brand-primary/10 overflow-hidden",
+    "relative h-48 bg-gradient-to-br from-brand-primary/20 via-brand-muted/30 to-brand-primary/10 overflow-hidden flex items-center justify-center",
 
   // Image du projet
   image:
-    "w-full h-full object-cover group-hover:scale-105 transition-transform duration-300",
+    "w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 p-2",
 
   // Icône décorative (si pas d'image)
   placeholder: "absolute inset-0 flex items-center justify-center",
@@ -63,6 +63,12 @@ const styles = {
   link: "inline-flex items-center gap-2 text-sm font-medium text-brand-text/70 hover:text-brand-primary \
   transition-colors group/link",
 
+  // Bouton principal (Lancer)
+  ctaButton:
+    "ml-auto inline-flex items-center gap-2 bg-brand-primary text-white px-3 py-2 rounded-md text-sm font-semibold hover:brightness-105 transition",
+  ctaDisabled:
+    "ml-auto inline-flex items-center gap-2 bg-brand-muted text-brand-text/60 px-3 py-2 rounded-md text-sm font-semibold cursor-not-allowed",
+
   // Icône de flèche dans les liens
   arrow:
     "opacity-0 -translate-y-1 group-hover/link:opacity-100 group-hover/link:translate-y-0 transition-all",
@@ -74,6 +80,27 @@ const styles = {
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const handleLaunch = () => {
+    const hasDemo = project.demo && project.demo.trim().length > 0;
+    const hasRepo = project.repo && project.repo.trim().length > 0;
+
+    if (hasDemo) {
+      window.open(project.demo, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    if (hasRepo) {
+      // If no demo, open the repo so user can download/run locally
+      window.open(project.repo, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    // Fallback: notify user there's no demo available
+    alert(
+      "Aucune démo disponible pour ce projet. Consultez le dépôt pour les instructions d'exécution."
+    );
+  };
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -146,6 +173,28 @@ export default function ProjectCard({ project }: { project: Project }) {
               <ArrowUpRight size={14} className={styles.arrow} />
             </a>
           )}
+
+          {/* Lancer / Play button */}
+          <button
+            type="button"
+            onClick={handleLaunch}
+            className={
+              project.demo?.trim() || project.repo?.trim()
+                ? styles.ctaButton
+                : styles.ctaDisabled
+            }
+            aria-label={`Lancer ${project.title}`}
+            title={
+              project.demo?.trim()
+                ? "Ouvrir la démo"
+                : project.repo?.trim()
+                ? "Ouvrir le dépôt"
+                : "Pas de démo disponible"
+            }
+          >
+            <Play size={16} />
+            <span>Lancer</span>
+          </button>
         </div>
       </div>
 

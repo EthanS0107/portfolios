@@ -14,7 +14,6 @@ module.exports = {
           muted: "rgb(var(--color-brand-muted) / <alpha-value>)",
           text: "rgb(var(--color-brand-text) / <alpha-value>)",
           surface: "rgb(var(--color-brand-surface) / <alpha-value>)",
-          success: "rgb(var(--color-brand-success) / <alpha-value>)",
         },
       },
       container: {
