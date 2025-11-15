@@ -90,7 +90,7 @@ export default function ContactForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           className={styles.input}
-          placeholder="Jean Martin"
+          placeholder="Ex : Jean Martin"
         />
       </div>
 
@@ -106,7 +106,7 @@ export default function ContactForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className={styles.input}
-          placeholder="jean.martin@example.com"
+          placeholder="Ex : jean.martin@example.com"
         />
       </div>
 
@@ -122,7 +122,7 @@ export default function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
           className={styles.textarea}
           rows={6}
-          placeholder="Bonjour, ..."
+          placeholder="Ex : Bonjour, ..."
         />
       </div>
 
