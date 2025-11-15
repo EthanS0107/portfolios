@@ -20,7 +20,10 @@ const styles = {
     shadow-sm",
 
   // Logo
-  logo: "flex items-center group transition-transform hover:scale-105 duration-200 relative z-50",
+  // Ajout d'une ombre, d'une transition plus marquée, et légère rotation au survol
+  logo: "flex items-center group transition-transform transition-shadow duration-300 ease-out \
+    hover:scale-110 hover:-rotate-1 hover:drop-shadow-2xl hover:brightness-105 \
+    active:scale-95 relative z-50",
 
   // Liens de navigation (état normal)
   navLink:
@@ -88,7 +91,7 @@ export default function Header() {
               alt="Ethan Serville"
               width={180}
               height={40}
-              className="h-10 w-auto"
+              className="h-10 w-auto transition-transform duration-300 ease-out group-hover:scale-105 group-hover:-translate-y-1"
               priority
             />
           </div>
