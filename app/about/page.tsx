@@ -5,7 +5,7 @@
 const styles = {
   section: "",
   title: "text-2xl font-semibold",
-  text: "mt-4 text-gray-700 dark:text-gray-300",
+  text: "mt-4 text-brand-text",
 };
 
 export default function About() {

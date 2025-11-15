@@ -16,8 +16,8 @@ const styles = {
   // Barre de navigation principale
   header:
     "sticky top-0 z-50 border-b border-brand-muted/50 bg-brand-surface/95 \
-    backdrop-blur-lg supports-[backdrop-filter]:bg-brand-surface/95 dark:bg-gray-900/95 \
-    dark:border-gray-700/50 shadow-sm",
+    backdrop-blur-lg supports-[backdrop-filter]:bg-brand-surface/95 bg-brand-surface/95 \
+    border-brand-muted/50 shadow-sm",
 
   // Logo
   logo: "flex items-center group transition-transform hover:scale-105 duration-200 relative z-50",
@@ -25,44 +25,41 @@ const styles = {
   // Liens de navigation (état normal)
   navLink:
     "relative px-3 md:px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all \
-     duration-200 ease-in-out text-brand-text/70 dark:text-gray-400 hover:text-brand-primary \
-     dark:hover:text-teal-400 hover:bg-brand-primary/5 dark:hover:bg-gray-800/50",
+    duration-200 ease-in-out text-brand-text/70 hover:text-brand-primary hover:bg-brand-primary/5",
 
   // Liens de navigation (état actif/sélectionné)
   navLinkActive:
     "relative px-3 md:px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all \
-    duration-200 ease-in-out text-brand-primary dark:text-teal-400 bg-brand-primary/10 dark:bg-teal-900/30",
+    duration-200 ease-in-out text-brand-primary bg-brand-primary/10",
 
   // Indicateur sous le lien actif
   activeIndicator:
-    "absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-brand-primary dark:bg-teal-400 rounded-full",
+    "absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-brand-primary rounded-full",
 
   // Bouton burger
   burgerButton:
-    "p-2 rounded-lg text-brand-text dark:text-gray-200 hover:bg-brand-primary/10 dark:hover:bg-gray-800 transition-colors",
+    "p-2 rounded-lg text-brand-text hover:bg-brand-primary/10 transition-colors",
 
   // Overlay sombre derrière le menu mobile
   overlay: "md:hidden fixed top-[73px] inset-x-0 bottom-0 bg-black/30 z-30",
 
   // Panneau du menu mobile
   mobileMenu:
-    "md:hidden fixed top-[73px] right-0 h-[calc(100vh-73px)] w-64 bg-brand-surface dark:bg-gray-900 \
-    border-l border-brand-muted/50 dark:border-gray-700/50 z-40 transform transition-transform \
-    transition-opacity duration-300 ease-in-out",
+    "md:hidden fixed top-[73px] right-0 h-[calc(100vh-73px)] w-64 bg-brand-surface \
+    border-l border-brand-muted/50 z-40 transform transition-transform transition-opacity duration-300 ease-in-out",
 
   // Liens dans le menu mobile (état normal)
   mobileNavLink:
     "relative px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ease-in-out \
-     text-brand-text/70 dark:text-gray-400 hover:text-brand-primary dark:hover:text-teal-400 hover:bg-brand-primary/5 dark:hover:bg-gray-800/50",
+    text-brand-text/70 hover:text-brand-primary hover:bg-brand-primary/5",
 
   // Liens dans le menu mobile (état actif)
   mobileNavLinkActive:
     "relative px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ease-in-out \
-    text-brand-primary dark:text-teal-400 bg-brand-primary/10 dark:bg-teal-900/30",
+    text-brand-primary bg-brand-primary/10",
 
   // Point indicateur dans le menu mobile
-  mobileActiveIndicator:
-    "w-2 h-2 rounded-full bg-brand-primary dark:bg-teal-400",
+  mobileActiveIndicator: "w-2 h-2 rounded-full bg-brand-primary",
 };
 
 export default function Header() {
@@ -114,7 +111,7 @@ export default function Header() {
           })}
 
           {/* Divider */}
-          <div className="w-px h-6 bg-brand-muted/50 dark:bg-gray-700 mx-2" />
+          <div className="w-px h-6 bg-brand-muted/50 mx-2" />
 
           {/* Theme Toggle */}
           <ThemeToggle />

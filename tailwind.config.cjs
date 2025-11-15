@@ -10,18 +10,11 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          primary: {
-            DEFAULT: "#5e787d",
-          },
-          muted: {
-            DEFAULT: "#d9d9d9",
-          },
-          text: {
-            DEFAULT: "#545454",
-          },
-          surface: {
-            DEFAULT: "#ffffff",
-          },
+          primary: "rgb(var(--color-brand-primary) / <alpha-value>)",
+          muted: "rgb(var(--color-brand-muted) / <alpha-value>)",
+          text: "rgb(var(--color-brand-text) / <alpha-value>)",
+          surface: "rgb(var(--color-brand-surface) / <alpha-value>)",
+          success: "rgb(var(--color-brand-success) / <alpha-value>)",
         },
       },
       container: {

@@ -20,8 +20,8 @@ type Project = {
 
 const styles = {
   // Carte principale du projet
-  card: "group relative bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all \
-  duration-300 border border-brand-muted/30 dark:bg-gray-800 dark:border-gray-700",
+  card: "group relative bg-brand-surface rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all \
+  duration-300 border border-brand-muted/30 bg-brand-surface/100 border-brand-muted/100",
 
   // Zone d'image/gradient
   imageContainer:
@@ -45,26 +45,23 @@ const styles = {
 
   // Titre du projet
   title:
-    "text-xl font-semibold text-brand-text group-hover:text-brand-primary transition-colors duration-300 \
-    dark:text-gray-100 dark:group-hover:text-teal-400",
+    "text-xl font-semibold text-brand-text group-hover:text-brand-primary transition-colors duration-300",
 
   // Description
-  description:
-    "mt-2 text-brand-text/70 leading-relaxed font-light dark:text-gray-300",
+  description: "mt-2 text-brand-text/70 leading-relaxed font-light",
 
   // Conteneur des tags
   tagsContainer: "flex flex-wrap gap-2",
 
   // Tag individuel
-  tag: "px-3 py-1 text-xs font-medium text-brand-primary bg-brand-primary/10 rounded-full \
-  dark:text-teal-400 dark:bg-teal-900/30",
+  tag: "px-3 py-1 text-xs font-medium text-brand-primary bg-brand-primary/10 rounded-full",
 
   // Conteneur des liens
   linksContainer: "flex gap-4 pt-2",
 
   // Lien (Code/Démo)
   link: "inline-flex items-center gap-2 text-sm font-medium text-brand-text/70 hover:text-brand-primary \
-  transition-colors group/link dark:text-gray-400 dark:hover:text-teal-400",
+  transition-colors group/link",
 
   // Icône de flèche dans les liens
   arrow:

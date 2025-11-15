@@ -13,7 +13,7 @@ export const metadata = {
 const styles = {
   // Conteneur principal
   container:
-    "min-h-screen bg-gradient-to-b from-white to-brand-muted/20 dark:from-gray-900 dark:to-gray-800",
+    "min-h-screen bg-gradient-to-b from-brand-surface to-brand-muted/20",
 
   // Section Hero
   heroSection: "py-20 px-4",
@@ -21,15 +21,13 @@ const styles = {
   heroContent: "space-y-4",
 
   // Titre principal
-  title:
-    "text-5xl md:text-6xl font-light tracking-tight text-brand-text dark:text-gray-100",
+  title: "text-5xl md:text-6xl font-light tracking-tight text-brand-text",
 
   // Barre décorative
   divider: "w-20 h-1 bg-brand-primary rounded-full",
 
   // Description
-  description:
-    "text-xl text-brand-text/70 max-w-2xl font-light dark:text-gray-300",
+  description: "text-xl text-brand-text/70 max-w-2xl font-light",
 
   // Section Timeline
   timelineSection: "pb-20 px-4",
@@ -37,7 +35,7 @@ const styles = {
 
   // Titre de section (Formation / Expérience)
   sectionTitle:
-    "text-3xl font-light text-brand-text mb-8 border-l-4 border-brand-primary pl-4 dark:text-gray-100",
+    "text-3xl font-light text-brand-text mb-8 border-l-4 border-brand-primary pl-4",
 
   // Liste des items
   itemsList: "space-y-8",

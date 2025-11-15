@@ -24,7 +24,7 @@ const styles = {
 
   // Titre de la catégorie
   title:
-    "text-2xl font-light text-brand-text border-l-4 border-brand-primary pl-4 dark:text-gray-100",
+    "text-2xl font-light text-brand-text border-l-4 border-brand-primary pl-4",
 
   // Grille des compétences
   grid: "grid gap-6 md:grid-cols-2",
@@ -36,18 +36,17 @@ const styles = {
   skillHeader: "flex justify-between items-center",
 
   // Nom de la compétence
-  skillName: "text-brand-text font-medium dark:text-gray-200",
+  skillName: "text-brand-text font-medium",
 
   // Pourcentage
-  skillLevel: "text-sm text-brand-text/60 font-light dark:text-gray-400",
+  skillLevel: "text-sm text-brand-text/60 font-light",
 
   // Barre de progression (fond)
-  progressBar:
-    "h-2 bg-brand-muted/30 rounded-full overflow-hidden dark:bg-gray-700",
+  progressBar: "h-2 bg-brand-muted/30 rounded-full overflow-hidden",
 
   // Barre de progression (remplissage)
   progressFill:
-    "h-full bg-gradient-to-r from-brand-primary to-brand-primary/70 rounded-full relative dark:from-teal-500 dark:to-teal-400",
+    "h-full bg-gradient-to-r from-brand-primary to-brand-primary/70 rounded-full relative",
 
   // Effet de brillance sur la barre
   shimmer:

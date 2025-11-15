@@ -2,7 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* Thème global basé sur la palette fournie */
 @layer base {
   :root {
     /* Couleurs mode clair */
@@ -10,6 +9,7 @@
     --color-brand-muted: 217 217 217; /* #d9d9d9 */
     --color-brand-text: 84 84 84; /* #545454 */
     --color-brand-surface: 255 255 255; /* #ffffff */
+    --color-brand-success: 22 163 74; /* #16a34a */
   }
 
   .dark {
@@ -18,6 +18,7 @@
     --color-brand-muted: 55 65 81; /* #374151 - gris sombre */
     --color-brand-text: 229 231 235; /* #e5e7eb - texte clair */
     --color-brand-surface: 17 24 39; /* #111827 - fond très sombre */
+    --color-brand-success: 6 95 70; /* #065f46 */
   }
 
   html,

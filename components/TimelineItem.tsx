@@ -24,41 +24,39 @@ const styles = {
   container: "relative pl-8 md:pl-12",
 
   // Ligne verticale de la timeline
-  line: "absolute left-0 top-0 bottom-0 w-px bg-brand-muted dark:bg-gray-700",
+  line: "absolute left-0 top-0 bottom-0 w-px bg-brand-muted",
 
   // Point/puce avec icône
-  dot: "absolute left-0 top-2 -translate-x-1/2 w-10 h-10 rounded-full bg-white border-2 border-brand-primary \
-  flex items-center justify-center dark:bg-gray-900/80 dark:border-teal-500",
+  dot: "absolute left-0 top-2 -translate-x-1/2 w-10 h-10 rounded-full bg-brand-surface border-2 border-brand-primary \
+  flex items-center justify-center bg-brand-surface/80 border-brand-primary/100",
 
   // Icône dans la puce
-  icon: "text-brand-primary dark:text-teal-400",
+  icon: "text-brand-primary",
 
   // Carte de contenu
-  card: "bg-white rounded-lg p-6 shadow-sm border border-brand-muted/30 hover:shadow-md \
-  transition-shadow dark:bg-gray-900/60 dark:border-gray-700 dark:shadow-none",
+  card: "bg-brand-surface rounded-lg p-6 shadow-sm border border-brand-muted/30 hover:shadow-md \
+  transition-shadow bg-brand-surface/60 border-brand-muted/100 shadow-none",
 
   // En-tête de la carte
   header: "space-y-2 mb-4",
 
   // Titre du poste/diplôme
-  title: "text-xl font-semibold text-brand-text dark:text-gray-100",
+  title: "text-xl font-semibold text-brand-text",
 
   // Organisation/École
-  organization:
-    "flex items-center gap-2 text-brand-primary font-medium dark:text-teal-400",
+  organization: "flex items-center gap-2 text-brand-primary font-medium",
 
   // Période
-  period:
-    "flex items-center gap-2 text-sm text-brand-text/60 dark:text-gray-400",
+  period: "flex items-center gap-2 text-sm text-brand-text/60",
 
   // Description
-  description: "text-brand-text/70 leading-relaxed mb-4 dark:text-gray-300",
+  description: "text-brand-text/70 leading-relaxed mb-4",
 
   // Conteneur des tags
   tagsContainer: "flex flex-wrap gap-2",
 
   // Tag individuel
-  tag: "px-3 py-1 text-xs font-medium text-brand-primary bg-brand-primary/10 rounded-full dark:text-teal-300 dark:bg-teal-900/40",
+  tag: "px-3 py-1 text-xs font-medium text-brand-primary bg-brand-primary/10 rounded-full",
 };
 
 export default function TimelineItem({ item, index }: TimelineItemProps) {

@@ -13,17 +13,15 @@ export const metadata = {
 const styles = {
   // Conteneur principal
   container:
-    "min-h-screen bg-gradient-to-b from-white to-brand-muted/20 dark:from-gray-900 dark:to-gray-800",
+    "min-h-screen bg-gradient-to-b from-brand-surface to-brand-muted/20",
 
   // Section Hero
   heroSection: "py-20 px-4",
   heroContainer: "container mx-auto max-w-6xl",
   heroContent: "space-y-4",
-  title:
-    "text-5xl md:text-6xl font-light tracking-tight text-brand-text dark:text-gray-100",
+  title: "text-5xl md:text-6xl font-light tracking-tight text-brand-text",
   divider: "w-20 h-1 bg-brand-primary rounded-full",
-  description:
-    "text-xl text-brand-text/70 max-w-2xl font-light dark:text-gray-300",
+  description: "text-xl text-brand-text/70 max-w-2xl font-light",
 
   // Section Contact
   contactSection: "pb-20 px-4",
@@ -32,29 +30,28 @@ const styles = {
 
   // Infos de contact
   infoContainer: "space-y-8",
-  infoTitle: "text-2xl font-light text-brand-text mb-6 dark:text-gray-100",
+  infoTitle: "text-2xl font-light text-brand-text mb-6",
   infoList: "space-y-6",
 
   // Item de contact
   contactItem: "flex items-start gap-4 group",
   iconBox:
-    "p-3 bg-brand-primary/10 rounded-lg group-hover:bg-brand-primary/20 transition-colors dark:bg-teal-900/30 dark:group-hover:bg-teal-900/40",
-  icon: "text-brand-primary dark:text-teal-400",
-  itemTitle: "font-medium text-brand-text mb-1 dark:text-gray-200",
-  itemLink:
-    "text-brand-text/70 hover:text-brand-primary transition-colors dark:text-gray-300 dark:hover:text-teal-400",
-  itemText: "text-brand-text/70 dark:text-gray-300",
+    "p-3 bg-brand-primary/10 rounded-lg group-hover:bg-brand-primary/20 transition-colors",
+  icon: "text-brand-primary",
+  itemTitle: "font-medium text-brand-text mb-1",
+  itemLink: "text-brand-text/70 hover:text-brand-primary transition-colors",
+  itemText: "text-brand-text/70",
 
   // Carte de disponibilité
   availabilityCard:
-    "bg-brand-primary/5 p-6 rounded-lg border border-brand-primary/10 dark:bg-gray-800/50 dark:border-gray-700",
-  availabilityTitle: "font-medium text-brand-text mb-2 dark:text-gray-200",
-  availabilityText: "text-brand-text/70 text-sm dark:text-gray-300",
+    "bg-brand-primary/5 p-6 rounded-lg border border-brand-primary/10",
+  availabilityTitle: "font-medium text-brand-text mb-2",
+  availabilityText: "text-brand-text/70 text-sm",
 
   // Formulaire
   formContainer:
-    "bg-white p-8 rounded-lg shadow-sm border border-brand-muted/30 dark:bg-gray-900/50 dark:border-gray-700 dark:shadow-none",
-  formTitle: "text-2xl font-light text-brand-text mb-6 dark:text-gray-100",
+    "bg-brand-surface p-8 rounded-lg shadow-sm border border-brand-muted/30",
+  formTitle: "text-2xl font-light text-brand-text mb-6",
 };
 
 export default function ContactPage() {

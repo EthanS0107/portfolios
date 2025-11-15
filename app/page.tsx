@@ -14,47 +14,46 @@ const styles = {
 
   // Badge "Portfolio"
   badge:
-    "inline-block rounded-full bg-brand-muted/60 text-brand-text px-3 py-1 text-xs tracking-wide dark:bg-gray-700 dark:text-gray-300",
+    "inline-block rounded-full bg-brand-muted/60 text-brand-text px-3 py-1 text-xs tracking-wide",
 
   // Titre principal
   title:
-    "mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-brand-text dark:text-gray-100 text-center md:text-left",
+    "mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-brand-text text-center md:text-left",
 
   // Nom en surbrillance
-  name: "text-brand-primary dark:text-teal-400",
+  name: "text-brand-primary",
 
   // Description/sous-titre
   subtitle:
-    "mt-4 text-base md:text-lg text-brand-text/80 dark:text-gray-300 text-center md:text-left",
+    "mt-4 text-base md:text-lg text-brand-text/80 text-center md:text-left",
 
   // Conteneur des boutons CTA
   ctaContainer: "mt-6 flex flex-wrap gap-3 justify-center md:justify-start",
 
   // Bouton principal (Voir mes projets)
   primaryButton:
-    "inline-flex items-center rounded bg-brand-primary px-4 py-2 text-white hover:opacity-90 dark:bg-teal-600",
+    "inline-flex items-center rounded bg-brand-primary px-4 py-2 text-white hover:opacity-90",
 
   // Bouton secondaire (bordure)
   secondaryButton:
-    "inline-flex items-center rounded border border-brand-muted px-4 py-2 text-brand-text hover:opacity-90 dark:border-gray-600 dark:text-gray-300",
+    "inline-flex items-center rounded border border-brand-muted px-4 py-2 text-brand-text hover:opacity-90",
 
   // Liens sociaux
   socialLinks:
-    "mt-6 flex flex-wrap gap-4 text-sm text-brand-text/70 dark:text-gray-400 justify-center md:justify-start",
+    "mt-6 flex flex-wrap gap-4 text-sm text-brand-text/70 justify-center md:justify-start",
   socialLink: "hover:opacity-90",
 
   // Photo de profil
   profileContainer:
     "order-first md:order-last md:col-span-5 lg:col-span-5 flex justify-center md:justify-end mb-6 md:mb-0",
   profileImage:
-    "relative w-40 h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-brand-muted shadow-lg dark:border-gray-700",
+    "relative w-40 h-40 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-brand-muted shadow-lg",
 
   // Bandeau d'infos
   infoGrid: "mt-12 grid gap-4 sm:grid-cols-3",
-  infoCard:
-    "rounded-lg border border-brand-muted p-4 dark:border-gray-700 dark:bg-gray-800/50",
-  infoLabel: "text-sm text-brand-text/70 dark:text-gray-400",
-  infoValue: "font-semibold text-brand-text dark:text-gray-200",
+  infoCard: "rounded-lg border border-brand-muted p-4 bg-brand-surface/100",
+  infoLabel: "text-sm text-brand-text/70",
+  infoValue: "font-semibold text-brand-text",
 };
 
 export default function Home() {
