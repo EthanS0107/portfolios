@@ -12,7 +12,7 @@ const styles = {
 
   // État scrollé
   navScrolled:
-    "bg-brand-primary/95 text-white backdrop-blur-sm supports-[backdrop-filter]:bg-brand-primary/80 shadow-lg",
+    "bg-blackbrand/98 text-white backdrop-blur-sm supports-[backdrop-filter]:bg-blackbrand/80 shadow-lg border-danger-700",
 
   // État transparent
   navTransparent: "bg-transparent",
@@ -36,7 +36,7 @@ const styles = {
   menu: "hidden md:flex space-x-8 items-center",
 
   // Lien de navigation
-  link: "hover:opacity-95 transition-opacity px-2 py-1 rounded-md hover:underline",
+  link: "hover:opacity-95 transition-opacity px-2 py-1 rounded-md hover:underline hover:text-danger",
 };
 
 export default function Navbar() {

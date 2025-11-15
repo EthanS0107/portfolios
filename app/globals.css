@@ -4,22 +4,24 @@
 
 @layer base {
   :root {
-    --color-brand-primary: 14 165 233; /* sky blue */
-    --color-brand-primary-2: 99 102 241; /* indigo accent for gradients */
+    /* Light theme (subtle red accents on light surface) */
+    --color-brand-primary: 196 18 48; /* vivid red */
+    --color-brand-primary-2: 220 38 38; /* softer red for gradients */
     --color-brand-muted: 229 231 235;
     --color-brand-text: 17 24 39;
     --color-brand-surface: 255 255 255;
-    --color-brand-surface-2: 250 252 255;
+    --color-brand-surface-2: 250 250 250;
     --color-brand-success: 22 163 74;
   }
   .dark {
-    --color-brand-primary: 79 70 229;
-    --color-brand-primary-2: 20 184 166;
-    --color-brand-muted: 30 41 59;
-    --color-brand-text: 229 231 235;
-    --color-brand-surface: 17 24 39;
-    --color-brand-surface-2: 10 12 22;
-    --color-brand-success: 6 95 70;
+    /* Dark theme: rouge / noir - style moto */
+    --color-brand-primary: 255 69 58; /* bright accent red */
+    --color-brand-primary-2: 139 0 0; /* deep red for contrast */
+    --color-brand-muted: 40 44 52; /* dark muted gray */
+    --color-brand-text: 242 242 242; /* near white text */
+    --color-brand-surface: 8 8 10; /* very dark background */
+    --color-brand-surface-2: 14 14 16; /* slightly lighter for cards */
+    --color-brand-success: 16 185 129;
   }
 
   html,
@@ -30,11 +32,11 @@
   body {
     background-color: rgb(var(--color-brand-surface));
     color: rgb(var(--color-brand-text));
-    /* subtle layered gradient for more originality */
+    /* subtle layered gradient with red accents for depth */
     background-image: linear-gradient(
         135deg,
-        rgba(var(--color-brand-primary) / 0.06),
-        rgba(var(--color-brand-primary-2) / 0.04)
+        rgba(var(--color-brand-primary) / 0.04),
+        rgba(var(--color-brand-primary-2) / 0.03)
       ),
       radial-gradient(
         circle at 10% 10%,

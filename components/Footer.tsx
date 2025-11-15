@@ -4,11 +4,10 @@
 
 const styles = {
   // Conteneur du footer
-  footer:
-    "border-t border-brand-muted mt-12 bg-brand-surface border-brand-muted/100",
+  footer: "border-t border-danger/700 mt-12 bg-blackbrand/95",
 
   // Texte du copyright
-  text: "container py-6 text-center text-sm text-brand-text/70",
+  text: "container py-6 text-center text-sm text-brand-text/60",
 };
 
 export default function Footer() {

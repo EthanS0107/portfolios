@@ -9,16 +9,16 @@ import Image from "next/image";
 const styles = {
   section: "py-20 bg-brand-surface",
   container: "container mx-auto px-4",
-  title: "text-4xl font-bold text-brand-text mb-12 text-center",
+  title: "text-4xl font-bold text-danger mb-12 text-center",
   grid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
-  card: "rounded-lg overflow-hidden border border-brand-muted bg-brand-surface",
+  card: "rounded-lg overflow-hidden border border-blackbrand/80 bg-blackbrand/95",
   imageContainer: "relative aspect-video",
   image: "object-cover w-full h-full",
   cardContent: "p-6",
-  cardTitle: "text-xl font-bold text-brand-text mb-2",
-  cardDescription: "text-brand-text/80 mb-4",
+  cardTitle: "text-xl font-bold text-white mb-2",
+  cardDescription: "text-brand-text/70 mb-4",
   techContainer: "flex flex-wrap gap-2",
-  techTag: "px-3 py-1 bg-brand-muted/40 text-brand-text rounded-full text-sm",
+  techTag: "px-3 py-1 bg-danger/700 text-white rounded-full text-sm",
 };
 
 const projects = [

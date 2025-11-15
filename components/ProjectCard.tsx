@@ -20,12 +20,12 @@ type Project = {
 
 const styles = {
   // Carte principale du projet
-  card: "group relative bg-brand-surface rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all \
-  duration-300 border border-brand-muted/30 bg-brand-surface/100 border-brand-muted/100",
+  card: "group relative rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all \
+  duration-300 border border-blackbrand/80 bg-blackbrand/95",
 
   // Zone d'image/gradient
   imageContainer:
-    "relative h-48 bg-gradient-to-br from-brand-primary/20 via-brand-muted/30 to-brand-primary/10 overflow-hidden flex items-center justify-center",
+    "relative h-48 bg-gradient-to-br from-danger/20 via-brand-muted/20 to-danger/10 overflow-hidden flex items-center justify-center",
 
   // Image du projet
   image:
@@ -34,18 +34,18 @@ const styles = {
   // Icône décorative (si pas d'image)
   placeholder: "absolute inset-0 flex items-center justify-center",
   placeholderIcon:
-    "w-20 h-20 border-2 border-brand-primary/30 rounded-lg transform rotate-45",
+    "w-20 h-20 border-2 border-danger/30 rounded-lg transform rotate-45",
 
   // Overlay au survol
   overlay:
-    "absolute inset-0 bg-brand-text/0 group-hover:bg-brand-text/5 transition-all duration-300",
+    "absolute inset-0 bg-brand-text/0 group-hover:bg-brand-text/6 transition-all duration-300",
 
   // Contenu de la carte
   content: "p-6 space-y-4",
 
   // Titre du projet
   title:
-    "text-xl font-semibold text-brand-text group-hover:text-brand-primary transition-colors duration-300",
+    "text-xl font-semibold text-brand-text group-hover:text-danger transition-colors duration-300",
 
   // Description
   description: "mt-2 text-brand-text/70 leading-relaxed font-light",
@@ -54,18 +54,18 @@ const styles = {
   tagsContainer: "flex flex-wrap gap-2",
 
   // Tag individuel
-  tag: "px-3 py-1 text-xs font-medium text-brand-primary bg-brand-primary/10 rounded-full",
+  tag: "px-3 py-1 text-xs font-medium text-white bg-danger/700 rounded-full",
 
   // Conteneur des liens
   linksContainer: "flex gap-4 pt-2",
 
   // Lien (Code/Démo)
-  link: "inline-flex items-center gap-2 text-sm font-medium text-brand-text/70 hover:text-brand-primary \
+  link: "inline-flex items-center gap-2 text-sm font-medium text-brand-text/70 hover:text-danger \
   transition-colors group/link",
 
   // Bouton principal (Lancer)
   ctaButton:
-    "ml-auto inline-flex items-center gap-2 bg-brand-primary text-white px-3 py-2 rounded-md text-sm font-semibold hover:brightness-105 transition",
+    "ml-auto inline-flex items-center gap-2 bg-danger text-white px-3 py-2 rounded-md text-sm font-semibold hover:brightness-105 transition",
   ctaDisabled:
     "ml-auto inline-flex items-center gap-2 bg-brand-muted text-brand-text/60 px-3 py-2 rounded-md text-sm font-semibold cursor-not-allowed",
 
@@ -75,7 +75,7 @@ const styles = {
 
   // Accent décoratif dans le coin
   cornerAccent:
-    "absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-brand-primary/0 to-brand-primary/5 opacity-0 \
+    "absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-danger/0 to-danger/8 opacity-0 \
     group-hover:opacity-100 transition-opacity duration-300",
 };
 

@@ -15,9 +15,9 @@ import ThemeToggle from "./ThemeToggle";
 const styles = {
   // Barre de navigation principale
   header:
-    "sticky top-0 z-50 border-b border-brand-muted/50 bg-brand-surface/95 \
-    backdrop-blur-lg supports-[backdrop-filter]:bg-brand-surface/95 bg-brand-surface/95 \
-    border-brand-muted/50 shadow-sm",
+    "sticky top-0 z-50 border-b border-blackbrand/40 bg-blackbrand/95 \
+    backdrop-blur-lg supports-[backdrop-filter]:bg-blackbrand/95 bg-blackbrand/95 \
+    shadow-sm",
 
   // Logo
   logo: "flex items-center group transition-transform hover:scale-105 duration-200 relative z-50",
@@ -25,12 +25,12 @@ const styles = {
   // Liens de navigation (état normal)
   navLink:
     "relative px-3 md:px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all \
-    duration-200 ease-in-out text-brand-text/70 hover:text-brand-primary hover:bg-brand-primary/5",
+    duration-200 ease-in-out text-brand-text/70 hover:text-danger hover:bg-danger/10",
 
   // Liens de navigation (état actif/sélectionné)
   navLinkActive:
     "relative px-3 md:px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all \
-    duration-200 ease-in-out text-brand-primary bg-brand-primary/10",
+    duration-200 ease-in-out text-white bg-danger/20",
 
   // Indicateur sous le lien actif
   activeIndicator:
@@ -38,25 +38,25 @@ const styles = {
 
   // Bouton burger
   burgerButton:
-    "p-2 rounded-lg text-brand-text hover:bg-brand-primary/10 transition-colors",
+    "p-2 rounded-lg text-brand-text hover:bg-danger/10 transition-colors",
 
   // Overlay sombre derrière le menu mobile
-  overlay: "md:hidden fixed top-[73px] inset-x-0 bottom-0 bg-black/30 z-30",
+  overlay: "md:hidden fixed top-[73px] inset-x-0 bottom-0 bg-black/50 z-30",
 
   // Panneau du menu mobile
   mobileMenu:
-    "md:hidden fixed top-[73px] right-0 h-[calc(100vh-73px)] w-64 bg-brand-surface \
-    border-l border-brand-muted/50 z-40 transform transition-transform transition-opacity duration-300 ease-in-out",
+    "md:hidden fixed top-[73px] right-0 h-[calc(100vh-73px)] w-64 bg-blackbrand/95 \
+    border-l border-blackbrand/80 z-40 transform transition-transform transition-opacity duration-300 ease-in-out",
 
   // Liens dans le menu mobile (état normal)
   mobileNavLink:
     "relative px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ease-in-out \
-    text-brand-text/70 hover:text-brand-primary hover:bg-brand-primary/5",
+    text-brand-text/70 hover:text-danger hover:bg-danger/10",
 
   // Liens dans le menu mobile (état actif)
   mobileNavLinkActive:
     "relative px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ease-in-out \
-    text-brand-primary bg-brand-primary/10",
+    text-white bg-danger/20",
 
   // Point indicateur dans le menu mobile
   mobileActiveIndicator: "w-2 h-2 rounded-full bg-brand-primary",
