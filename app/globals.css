@@ -6,7 +6,7 @@
 @layer base {
   :root {
     --color-brand-primary: 196 18 48;
-    --color-brand-primary-2: 220 38 38
+    --color-brand-primary-2: 220 38 38;
     --color-brand-muted: 229 231 235;
     --color-brand-text: 17 24 39;
     --color-brand-surface: 255 255 255;

@@ -24,10 +24,10 @@ const styles = {
   container: "relative pl-8 md:pl-12",
 
   // Ligne verticale de la timeline
-  line: "absolute left-0 top-0 bottom-0 w-px bg-brand-muted",
+  line: "absolute left-4 top-0 bottom-0 w-px bg-brand-muted/60",
 
   // Point/puce avec icône
-  dot: "absolute left-0 top-2 -translate-x-1/2 w-10 h-10 rounded-full bg-brand-surface border-2 border-brand-primary \
+  dot: "absolute left-4 top-2 -translate-x-1/2 w-10 h-10 rounded-full bg-brand-surface border-2 border-brand-primary \
   flex items-center justify-center bg-brand-surface/80 border-brand-primary/100",
 
   // Icône dans la puce
@@ -72,7 +72,6 @@ export default function TimelineItem({ item, index }: TimelineItemProps) {
     >
       {/* Timeline line */}
       <div className={styles.line} />
-
       {/* Timeline dot */}
       <div className={styles.dot}>
         {isEducation ? (

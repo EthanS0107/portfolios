@@ -77,10 +77,13 @@ export default function ExperiencePage() {
           {/* Formation */}
           <div>
             <h2 className={styles.sectionTitle}>Formation</h2>
-            <div className={styles.itemsList}>
-              {education.map((item, index) => (
-                <TimelineItem key={index} item={item} index={index} />
-              ))}
+            <div className="relative">
+              <div className="absolute left-4 top-0 bottom-0 w-px bg-brand-muted" />
+              <div className={styles.itemsList}>
+                {education.map((item, index) => (
+                  <TimelineItem key={index} item={item} index={index} />
+                ))}
+              </div>
             </div>
           </div>
 
