@@ -36,19 +36,33 @@ const styles = {
 export default function SkillsPage() {
   const skillCategories = [
     {
-      title: "Langages de programmation",
+      title: "Backend",
       skills: [
         { name: "Python", level: 70, icon: "logo_skills/Python.png" },
-        { name: "TypeScript", level: 5, icon: "logo_skills/typescript.png" },
         { name: "PHP", level: 75, icon: "logo_skills/PHP.png" },
         { name: "C++", level: 50, icon: "logo_skills/C++.png" },
         { name: "SQL", level: 80, icon: "logo_skills/SQL.png" },
+        { name: "Node.js", level: 5, icon: "logo_skills/node.js.png" },
+      ],
+    },
+    {
+      title: "Frontend",
+      skills: [
+        { name: "HTML", level: 80, icon: "logo_skills/HTML5.png" },
+        { name: "CSS", level: 70, icon: "logo_skills/CSS3.png" },
         { name: "JavaScript", level: 10, icon: "logo_skills/javascript.png" },
+        { name: "TypeScript", level: 5, icon: "logo_skills/typescript.png" },
       ],
     },
     {
       title: "Frameworks & Bibliothèques",
       skills: [
+        {
+          name: "Symfony",
+          level: 50,
+          icon: "logo_skills/symfony.png",
+          iconDark: "logo_skills/symfony-dark.svg",
+        },
         { name: "React", level: 5, icon: "logo_skills/React.png" },
         {
           name: "Next.js",
@@ -56,17 +70,20 @@ export default function SkillsPage() {
           icon: "logo_skills/nextjs.png",
           iconDark: "logo_skills/nextjs-dark.svg",
         },
-        { name: "Node.js", level: 5, icon: "logo_skills/node.js.png" },
         {
           name: "Tailwind CSS",
           level: 5,
           icon: "logo_skills/Tailwind_CSS.png",
         },
         {
-          name: "Symfony",
-          level: 50,
-          icon: "logo_skills/symfony.png",
-          iconDark: "logo_skills/symfony-dark.svg",
+          name: "tkinter",
+          level: 20,
+          icon: "logo_skills/tkinter.png",
+        },
+        {
+          name: "pygame",
+          level: 5,
+          icon: "logo_skills/pygame.png",
         },
       ],
     },
