@@ -1,0 +1,47 @@
+import { Project } from './types';
+
+export const projects: Project[] = [
+  {
+    id: '1',
+    title: 'Pac-Man',
+    image: '/projects/Pacman.png',
+    description: "Reproduction simplifiée du jeu 'Pac-Man'",
+    repo: 'https://github.com/EthanS0107/jeu_Pacman',
+    demo: '',
+    launch: null,
+    tags: ['Python', 'Tkinter'],
+  },
+  {
+    id: '2',
+    title: 'Steam-CRUD',
+    image: null,
+    description:
+      "Création d'une interface utilisateur, manipulation et modification d'une base de données",
+    repo: 'https://github.com/EthanS0107/Steam-CRUD',
+    demo: '',
+    launch: null,
+    tags: ['PHP', 'HTML', 'CSS', 'SQL'],
+  },
+  {
+    id: '3',
+    title: 'Portfolio Personnel',
+    image: null,
+    description: 'Site portfolio',
+    repo: 'https://github.com/EthanS0107/portfolios',
+    demo: '',
+    launch: null,
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+  },
+  {
+    id: '4',
+    title: 'Stratego',
+    image: null,
+    description: 'En Cours... Reproduction du jeu de plateau Stratego',
+    repo: 'https://github.com/EthanS0107/stratego',
+    demo: '',
+    launch: null,
+    tags: ['C++'],
+  },
+];
+
+export default projects;

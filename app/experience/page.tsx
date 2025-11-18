@@ -1,9 +1,9 @@
-import TimelineItem from "../../components/TimelineItem";
-import data from "@/data/experience.json";
+import TimelineItem from '../../components/TimelineItem';
+import data from '@/data/experience';
 
 export const metadata = {
-  title: "Parcours | Ethan Serville",
-  description: "Mon parcours académique et professionnel",
+  title: 'Parcours | Ethan Serville',
+  description: 'Mon parcours académique et professionnel',
 };
 
 // ======
@@ -12,39 +12,37 @@ export const metadata = {
 
 const styles = {
   // Conteneur principal
-  container:
-    "min-h-screen bg-gradient-to-b from-brand-surface to-brand-muted/20",
+  container: 'min-h-screen bg-gradient-to-b from-brand-surface to-brand-muted/20',
 
   // Section Hero
-  heroSection: "py-20 px-4",
-  heroContainer: "container mx-auto max-w-6xl",
-  heroContent: "space-y-4",
+  heroSection: 'py-20 px-4',
+  heroContainer: 'container mx-auto max-w-6xl',
+  heroContent: 'space-y-4',
 
   // Titre principal
-  title: "text-5xl md:text-6xl font-light tracking-tight text-brand-text",
+  title: 'text-5xl md:text-6xl font-light tracking-tight text-brand-text',
 
   // Barre décorative
-  divider: "w-20 h-1 bg-brand-primary rounded-full",
+  divider: 'w-20 h-1 bg-brand-primary rounded-full',
 
   // Description
-  description: "text-xl text-brand-text/70 max-w-2xl font-light",
+  description: 'text-xl text-brand-text/70 max-w-2xl font-light',
 
   // Section Timeline
-  timelineSection: "pb-20 px-4",
-  timelineContainer: "container mx-auto max-w-4xl space-y-16",
+  timelineSection: 'pb-20 px-4',
+  timelineContainer: 'container mx-auto max-w-4xl space-y-16',
 
   // Titre de section (Formation / Expérience)
-  sectionTitle:
-    "text-3xl font-light text-brand-text mb-8 border-l-4 border-brand-primary pl-4",
+  sectionTitle: 'text-3xl font-light text-brand-text mb-8 border-l-4 border-brand-primary pl-4',
 
   // Liste des items
-  itemsList: "space-y-8",
+  itemsList: 'space-y-8',
 };
 
 export default function ExperiencePage() {
   const education = data.education.map((item) => ({
     ...item,
-    type: "education" as const,
+    type: 'education' as const,
   }));
   // Garder les données en réserve pour réactiver la section plus tard.
   // La déclaration ci‑dessous est volontairement non utilisée pour l'instant.
@@ -52,7 +50,7 @@ export default function ExperiencePage() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const _experience = data.experience.map((item) => ({
     ...item,
-    type: "work" as const,
+    type: 'work' as const,
   }));
 
   return (
@@ -64,8 +62,8 @@ export default function ExperiencePage() {
             <h1 className={styles.title}>Parcours</h1>
             <div className={styles.divider} />
             <p className={styles.description}>
-              Mon parcours académique et mes expériences professionnelles qui
-              ont façonné mes compétences.
+              Mon parcours académique et mes expériences professionnelles qui ont façonné mes
+              compétences.
             </p>
           </div>
         </div>
