@@ -5,9 +5,8 @@
 
 @layer base {
   :root {
-    /* Light theme (subtle red accents on light surface) */
-    --color-brand-primary: 196 18 48; /* vivid red */
-    --color-brand-primary-2: 220 38 38; /* softer red for gradients */
+    --color-brand-primary: 196 18 48;
+    --color-brand-primary-2: 220 38 38
     --color-brand-muted: 229 231 235;
     --color-brand-text: 17 24 39;
     --color-brand-surface: 255 255 255;
@@ -19,13 +18,12 @@
     --font-display: "Oswald", "Helvetica Neue", Arial, sans-serif;
   }
   .dark {
-    /* Dark theme: rouge / noir - style moto */
-    --color-brand-primary: 255 69 58; /* bright accent red */
-    --color-brand-primary-2: 139 0 0; /* deep red for contrast */
-    --color-brand-muted: 40 44 52; /* dark muted gray */
-    --color-brand-text: 242 242 242; /* near white text */
-    --color-brand-surface: 8 8 10; /* very dark background */
-    --color-brand-surface-2: 14 14 16; /* slightly lighter for cards */
+    --color-brand-primary: 255 69 58;
+    --color-brand-primary-2: 139 0 0;
+    --color-brand-muted: 40 44 52;
+    --color-brand-text: 242 242 242;
+    --color-brand-surface: 8 8 10;
+    --color-brand-surface-2: 14 14 16;
     --color-brand-success: 16 185 129;
   }
 
