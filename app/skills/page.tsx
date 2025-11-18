@@ -50,20 +50,18 @@ export default function SkillsPage() {
       title: "Frameworks & Bibliothèques",
       skills: [
         { name: "React", level: 5, icon: "logo_skills/React.png" },
-        { name: "Next.js", level: 5, icon: "logo_skills/nextjs.png" },
-        { name: "Node.js", level: 5, icon: "logo_skills/node.js.png" },
-        {
-          name: "Tailwind CSS",
-          level: 5,
-          icon: "logo_skills/Tailwind_CSS.png",
-        },
         {
           name: "Next.js",
           level: 5,
           icon: "logo_skills/nextjs.png",
           iconDark: "logo_skills/nextjs-dark.svg",
         },
-        { name: "Symfony", level: 50, icon: "logo_skills/symfony.png" },
+        { name: "Node.js", level: 5, icon: "logo_skills/node.js.png" },
+        {
+          name: "Tailwind CSS",
+          level: 5,
+          icon: "logo_skills/Tailwind_CSS.png",
+        },
         {
           name: "Symfony",
           level: 50,
@@ -75,7 +73,6 @@ export default function SkillsPage() {
     {
       title: "Outils & Technologies",
       skills: [
-        { name: "Git & GitHub", level: 85, icon: "logo_skills/GitHub.png" },
         {
           name: "Git & GitHub",
           level: 85,

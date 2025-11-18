@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 type Skill = {
   name: string;
@@ -38,7 +40,7 @@ const styles = {
   skillHeader: "flex justify-between items-center",
   skillHeaderLeft: "flex items-center gap-3",
   skillIcon:
-    "w-12 h-12 rounded-md overflow-hidden flex items-center justify-center p-1",
+    "w-14 h-14 rounded-md overflow-hidden flex items-center justify-center p-1",
   skillIconText: "text-sm text-brand-text/70",
 
   // Nom de la compétence
@@ -60,6 +62,17 @@ const styles = {
 };
 
 export default function SkillCategory({ category }: SkillCategoryProps) {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const shouldInvert = (name: string) => {
+    return /next\.?js|github|git & github|symfony/i.test(name);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -86,7 +99,13 @@ export default function SkillCategory({ category }: SkillCategoryProps) {
             <div className={styles.skillHeader}>
               <div className={styles.skillHeaderLeft}>
                 {skill.icon ? (
-                  <div className={styles.skillIcon}>
+                  <div
+                    className={`${styles.skillIcon} ${
+                      mounted && theme === "dark" && shouldInvert(skill.name)
+                        ? "invert"
+                        : ""
+                    }`}
+                  >
                     <Image
                       src={
                         skill.icon.startsWith("/")
