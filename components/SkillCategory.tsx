@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type Skill = {
   name: string;
   level: number;
+  icon?: string;
 };
 
 type SkillCategoryProps = {
@@ -34,6 +36,10 @@ const styles = {
 
   // En-tête (nom + pourcentage)
   skillHeader: "flex justify-between items-center",
+  skillHeaderLeft: "flex items-center gap-3",
+  skillIcon:
+    "w-12 h-12 rounded-md overflow-hidden flex items-center justify-center p-1",
+  skillIconText: "text-sm text-brand-text/70",
 
   // Nom de la compétence
   skillName: "text-brand-text font-medium",
@@ -67,7 +73,7 @@ export default function SkillCategory({ category }: SkillCategoryProps) {
 
       {/* Skills Grid */}
       <div className={styles.grid}>
-        {category.skills.map((skill, index) => (
+        {category.skills.map((skill: Skill, index) => (
           <motion.div
             key={skill.name}
             initial={{ opacity: 0, x: -20 }}
@@ -78,7 +84,31 @@ export default function SkillCategory({ category }: SkillCategoryProps) {
           >
             {/* Skill Name and Level */}
             <div className={styles.skillHeader}>
-              <span className={styles.skillName}>{skill.name}</span>
+              <div className={styles.skillHeaderLeft}>
+                {skill.icon ? (
+                  <div className={styles.skillIcon}>
+                    <Image
+                      src={
+                        skill.icon.startsWith("/")
+                          ? skill.icon
+                          : `/${skill.icon}`
+                      }
+                      alt={skill.name + " logo"}
+                      width={32}
+                      height={32}
+                    />
+                  </div>
+                ) : (
+                  <div className={styles.skillIcon}>
+                    <span className={styles.skillIconText}>
+                      {skill.name.charAt(0)}
+                    </span>
+                  </div>
+                )}
+
+                <span className={styles.skillName}>{skill.name}</span>
+              </div>
+
               <span className={styles.skillLevel}>{skill.level}%</span>
             </div>
 
