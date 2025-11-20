@@ -6,10 +6,8 @@
     </linearGradient>
     <style>
       .titleD { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto; font-weight:700; font-size:20px; fill:#F8FAFC; }
-      .underlineD { stroke: url(#gAccentDark); stroke-width:3; stroke-linecap:round; fill:none; stroke-dasharray: 220; stroke-dashoffset: 220; animation: drawD 1s ease forwards 0.2s; }
-      .gradMoveD { animation: slideD 3s linear infinite; }
-      @keyframes drawD { to { stroke-dashoffset: 0; } }
-      @keyframes slideD { from { transform: translateX(-25%);} to { transform: translateX(25%);} }
+      /* static underline (no animations) */
+      .underlineD { stroke: url(#gAccentDark); stroke-width:3; stroke-linecap:round; fill:none; }
     </style>
   </defs>
 
@@ -18,5 +16,5 @@
   <!-- Text-only logo for dark mode with animated underline -->
   <text x="8" y="34" class="titleD">ETHAN SERVILLE</text>
   <path class="underlineD" d="M8 40 L220 40" />
-  <rect x="8" y="28" width="212" height="16" rx="8" fill="url(#gAccentDark)" opacity="0.03" class="gradMoveD" />
+  <!-- only animated dash underline (no static bar) -->
 </svg>

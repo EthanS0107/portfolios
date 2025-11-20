@@ -6,10 +6,8 @@
     </linearGradient>
     <style>
       .title { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto; font-weight:700; font-size:20px; fill:#0b1220; }
-      .underline { stroke: url(#gAccent); stroke-width:3; stroke-linecap:round; fill:none; stroke-dasharray: 220; stroke-dashoffset: 220; animation: draw 1s ease forwards 0.2s; }
-      .gradMove { animation: slide 3s linear infinite; }
-      @keyframes draw { to { stroke-dashoffset: 0; } }
-      @keyframes slide { from { transform: translateX(-25%);} to { transform: translateX(25%);} }
+      /* static underline (no animations) */
+      .underline { stroke: url(#gAccent); stroke-width:3; stroke-linecap:round; fill:none; }
     </style>
   </defs>
 
@@ -19,6 +17,5 @@
   <!-- path used for underline animation (draws left to right) -->
   <path class="underline" d="M8 40 L220 40" />
 
-  <!-- moving subtle gradient overlay on underline (extra motion) -->
-  <rect x="8" y="28" width="212" height="16" rx="8" fill="url(#gAccent)" opacity="0.02" class="gradMove" />
+  <!-- only animated dash underline (no static bar) -->
 </svg>
